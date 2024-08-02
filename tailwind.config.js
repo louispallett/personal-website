@@ -22,5 +22,7 @@ export default {
       montserrat: ["montserrat", "sans-serif"],
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
