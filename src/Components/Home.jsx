@@ -3,6 +3,8 @@ import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { Fade, Slide, JackInTheBox } from "react-awesome-reveal";
+
 export default function Home() {
     const [welcome, setWelcome] = useState(true);
     const [exiting, setExiting] = useState(false);
@@ -11,17 +13,17 @@ export default function Home() {
         const handleWelcome = () => {
             const hasWelcomed = localStorage.getItem('hasWelcomed');
     
-            // if (!hasWelcomed) {
+            if (!hasWelcomed) {
                 setTimeout(() => {
                     setExiting(true);
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
                     setWelcome(false);
                     localStorage.setItem('hasWelcomed', 'true'); 
-                }, 3000);
-            // } else {
-            //     setWelcome(false);
-            // }
+                }, 2000);
+            } else {
+                setWelcome(false);
+            }
         }
         handleWelcome();
     }, []);
@@ -32,7 +34,6 @@ export default function Home() {
                 <section className="flex items-center justify-center my-28 mb-48 dark:text-slate-100">
                     <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
                         <p className="text-center">Welcome</p>
-                        <p>Enjoy your stay!</p>
                     </div>
                 </section>
             ) : (
@@ -53,7 +54,9 @@ export default function Home() {
                         </div>
                     </section>
                     <img src={ChevronDoubleDownIcon} className="h-10 fill-white" alt="" />
-                    <AboutMe />
+                    <JackInTheBox triggerOnce >
+                        <AboutMe />
+                    </JackInTheBox>
                     <Technical />
                     <SoftSkills />
                 </div>
@@ -95,110 +98,120 @@ function Technical() {
     return (
         <section className="flex flex-col items-center p-2.5">
             <section className="dark:text-slate-100 flex flex-col items-center">
-                <div className="max-w-maxArticle text-center">
-                    <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Technical Skills and Knowledge</h3>
-                    <p className="sm:text-lg my-10">
-                        I've learned and used a lot of different languages and technologies over the last couple of years. I've listed them below - you can click on any of them to read more about my experience using them and what projects best demonstrate my usage of them.
-                    </p>
-                </div>
-                <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Frontend</h3>
-                <fieldset id="frontend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg" />
-                        <p className="text-slate-50">BABEL</p>
+                <Slide triggerOnce >
+                    <div className="max-w-maxArticle text-center">
+                        <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Technical Skills and Knowledge</h3>
+                        <p className="sm:text-lg my-10">
+                            I've learned and used a lot of different languages and technologies over the last couple of years. I've listed them below - you can click on any of them to read more about my experience using them and what projects best demonstrate my usage of them.
+                        </p>
                     </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-                        <p className="text-slate-50">BOOTSTRAP</p>
+                </Slide>
+                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Frontend</h3>
+                    <fieldset id="frontend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg" />
+                            <p className="text-slate-50">BABEL</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                            <p className="text-slate-50">BOOTSTRAP</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                            <p className="text-slate-50">CSS</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+                            <p className="text-slate-50">HTML</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                            <p className="text-slate-50">JAVASCRIPT</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+                            <p className="text-slate-50">JEST</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
+                            <p className="text-slate-50">NPM</p>
+                        </div>
+                        <div>
+                            <img id="spinner" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                            <p className="text-slate-50">REACT</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" />
+                            <p className="text-slate-50">REACT ROUTER</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                            <p className="text-slate-50">SASS</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                            <p className="text-slate-50">TAILWINDCSS</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" />
+                            <p className="text-slate-50">WEBPACK</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
+                            <p className="text-slate-50">VITEJS</p>
+                        </div>
+                    </fieldset>
+                </Fade>
+                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Backend</h3>
+                    <fieldset id="backend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                            <p className="text-slate-50">MONGODB</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                            <p className="text-slate-50">MYSQL</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                            <p className="text-slate-50">NODEJS</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
+                            <p className="text-slate-50">SPRING</p>
+                        </div>
+                    </fieldset>
+                </Fade>
+                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Other</h3>
+                    <fieldset id="other" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"/>
+                            <p className="text-slate-50">C</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+                            <p className="text-slate-50">GIT</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                            <p className="text-slate-50">JAVA</p>
+                        </div>
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
+                            <p className="text-slate-50">PYTHON</p>
+                        </div>
+                    </fieldset>
+                </Fade>
+                <Fade triggerOnce >
+                    <div className="max-w-maxArticle text-center">
+                        <p className="sm:text-lg my-10">
+                            To see these languages and technologies used in action, please see my recent projects in the Projects section.
+                        </p>
                     </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                        <p className="text-slate-50">CSS</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
-                        <p className="text-slate-50">HTML</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                        <p className="text-slate-50">JAVASCRIPT</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
-                        <p className="text-slate-50">JEST</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-                        <p className="text-slate-50">NPM</p>
-                    </div>
-                    <div>
-                        <img id="spinner" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        <p className="text-slate-50">REACT</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" />
-                        <p className="text-slate-50">REACT ROUTER</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-                        <p className="text-slate-50">SASS</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-                        <p className="text-slate-50">TAILWINDCSS</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" />
-                        <p className="text-slate-50">WEBPACK</p>
-                    </div>
-                    <div> 
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
-                        <p className="text-slate-50">VITEJS</p>
-                    </div> 
-                </fieldset>
-                <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Backend</h3>
-                <fieldset id="backend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-                        <p className="text-slate-50">MONGODB</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                        <p className="text-slate-50">MYSQL</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                        <p className="text-slate-50">NODEJS</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
-                        <p className="text-slate-50">SPRING</p>
-                    </div>
-                </fieldset>
-                <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Other</h3>
-                <fieldset id="other" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"/>
-                        <p className="text-slate-50">C</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-                        <p className="text-slate-50">GIT</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                        <p className="text-slate-50">JAVA</p>
-                    </div>
-                    <div>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
-                        <p className="text-slate-50">PYTHON</p>
-                    </div>
-                </fieldset>
-                <div className="max-w-maxArticle text-center">
-                    <p className="sm:text-lg my-10">
-                        To see these languages and technologies used in action, please see my recent projects in the Projects section.
-                    </p>
-                </div>
+                </Fade>
             </section>
         </section>
     )
@@ -209,42 +222,44 @@ function SoftSkills() {
         <section className="flex flex-col items-center mr-2.5 p-2.5 bg-lime-500 dark:bg-lime-600 rounded-se-3xl lg:rounded-se-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
             <section>
                 <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
-                    <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
-                    <p className="sm:text-lg">
-                        Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience 
-                        and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the 
-                        Office for Students (OfS).
-                    </p>
-                    <div className="text-right my-5 ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
-                        <p>
-                            Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department, 
-                            and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
+                    <Slide triggerOnce >
+                        <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
+                        <p className="sm:text-lg">
+                            Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
+                            and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
+                            Office for Students (OfS).
                         </p>
-                    </div>
-                    <div className="my-5 mr-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
-                        <p>
-                            Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work. 
-                        </p>
-                    </div>
-                    <div className="text-right my-5 ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
-                        <p>
-                            Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
-                        </p>
-                    </div>
-                    <div className="my-5 mr-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
-                        <p>
-                            My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc. 
-                            I am required to work independantly to hit challanging targets and short deadlines.
-                        </p>
-                    </div>
-                    <div className="text-right my-5 ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
-                        <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
-                    </div>
+                        <div className="text-right my-5 ml-10">
+                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
+                            <p>
+                                Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
+                                and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
+                            </p>
+                        </div>
+                        <div className="my-5 mr-10">
+                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
+                            <p>
+                                Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
+                            </p>
+                        </div>
+                        <div className="text-right my-5 ml-10">
+                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
+                            <p>
+                                Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
+                            </p>
+                        </div>
+                        <div className="my-5 mr-10">
+                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
+                            <p>
+                                My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
+                                I am required to work independantly to hit challanging targets and short deadlines.
+                            </p>
+                        </div>
+                        <div className="text-right my-5 ml-10">
+                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
+                            <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
+                        </div>
+                    </Slide>
                 </div>
             </section>
         </section>
