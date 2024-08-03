@@ -1,9 +1,9 @@
 import homeImg from "/assets/images/home-img.jpg";
-import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Fade, Slide, JackInTheBox } from "react-awesome-reveal";
+import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 
 export default function Home() {
     const [welcome, setWelcome] = useState(true);
@@ -38,7 +38,7 @@ export default function Home() {
                 </section>
             ) : (
                 <div>
-                    <section className="flex items-center justify-center my-28 mb-48 dark:text-slate-100">
+                    <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100">
                         <div className="flex items-center gap-5">
                             <img src={homeImg} className="w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
                             <div>
@@ -53,7 +53,11 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <img src={ChevronDoubleDownIcon} className="h-10 fill-white" alt="" />
+                    <Fade triggerOnce>
+                        <div className="flex justify-center items-center p-2.5">
+                            <ChevronDoubleDownIcon className="h-12 w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
+                        </div>
+                    </Fade>
                     <JackInTheBox triggerOnce >
                         <AboutMe />
                     </JackInTheBox>
@@ -229,33 +233,33 @@ function SoftSkills() {
                             and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
                             Office for Students (OfS).
                         </p>
-                        <div className="text-right my-5 ml-10">
+                        <div className="text-right my-5 sm:ml-10">
                             <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
                             <p>
                                 Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
                                 and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
                             </p>
                         </div>
-                        <div className="my-5 mr-10">
+                        <div className="my-5 sm:mr-10">
                             <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
                             <p>
                                 Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
                             </p>
                         </div>
-                        <div className="text-right my-5 ml-10">
+                        <div className="text-right my-5 sm:ml-10">
                             <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
                             <p>
                                 Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
                             </p>
                         </div>
-                        <div className="my-5 mr-10">
+                        <div className="my-5 sm:mr-10">
                             <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
                             <p>
                                 My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
                                 I am required to work independantly to hit challanging targets and short deadlines.
                             </p>
                         </div>
-                        <div className="text-right my-5 ml-10">
+                        <div className="text-right my-5 sm:ml-10">
                             <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
                             <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
                         </div>
