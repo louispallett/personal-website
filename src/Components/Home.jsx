@@ -11,9 +11,9 @@ export default function Home() {
 
     useEffect(() => {
         const handleWelcome = () => {
-            const hasWelcomed = localStorage.getItem('hasWelcomed');
+            // const hasWelcomed = localStorage.getItem('hasWelcomed');
     
-            if (!hasWelcomed) {
+            // if (!hasWelcomed) {
                 setTimeout(() => {
                     setExiting(true);
                 }, 1000);
@@ -21,9 +21,9 @@ export default function Home() {
                     setWelcome(false);
                     localStorage.setItem('hasWelcomed', 'true'); 
                 }, 2000);
-            } else {
-                setWelcome(false);
-            }
+            // } else {
+            //     setWelcome(false);
+            // }
         }
         handleWelcome();
     }, []);
@@ -33,11 +33,11 @@ export default function Home() {
             {welcome ? (
                 <section className="flex items-center justify-center my-28 mb-48 dark:text-slate-100">
                     <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
-                        <p className="text-center">Welcome</p>
+                        <p className="text-center">Home</p>
                     </div>
                 </section>
             ) : (
-                <div>
+                <>
                     <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100">
                         <div className="flex items-center gap-5">
                             <img src={homeImg} className="w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
@@ -63,7 +63,7 @@ export default function Home() {
                     </JackInTheBox>
                     <Technical />
                     <SoftSkills />
-                </div>
+                </>
             )}
         </>
     )
@@ -110,7 +110,7 @@ function Technical() {
                         </p>
                     </div>
                 </Slide>
-                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                <Fade cascade damping={0.25} triggerOnce delay={100} >
                     <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Frontend</h3>
                     <fieldset id="frontend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
                         <div>
@@ -167,7 +167,7 @@ function Technical() {
                         </div>
                     </fieldset>
                 </Fade>
-                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                <Fade cascade damping={0.25} triggerOnce delay={100} >
                     <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Backend</h3>
                     <fieldset id="backend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
                         <div>
@@ -179,7 +179,7 @@ function Technical() {
                             <p className="text-slate-50">MYSQL</p>
                         </div>
                         <div>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
                             <p className="text-slate-50">NODEJS</p>
                         </div>
                         <div>
@@ -188,7 +188,7 @@ function Technical() {
                         </div>
                     </fieldset>
                 </Fade>
-                <Fade cascade damping={0.25} triggerOnce delay={250} >
+                <Fade cascade damping={0.25} triggerOnce delay={100} >
                     <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Other</h3>
                     <fieldset id="other" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200">
                         <div>
