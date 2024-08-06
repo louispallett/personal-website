@@ -20,7 +20,7 @@
   font-size: 2rem;
   border-width: 2px;
   border-radius: 10px;
-  background-color: #27279c;
+  background-color: #4338ca;
 }
 
 #frontend > div,
@@ -28,7 +28,6 @@
 #other > div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 5px;
   padding: 10px;
@@ -46,7 +45,10 @@
 
 #frontend > div > img,
 #backend > div > img,
-#other > div > img {
+#other > div > img,
+#frontend > div > svg,
+#backend > div > svg,
+#other > div > svg {
   height: 80px;
   width: 100px;
 }
@@ -67,15 +69,26 @@
   animation: fade-back 2000ms ease-out;
 }
 
-#other > div:nth-child(3) > img {
+#other > div:nth-child(4) > svg {
   transform: rotate(0deg);
   transition: transform 300ms linear;
 }
 
-#other > div:nth-child(3) > img:hover {
+#other > div:nth-child(4) > svg:hover {
   transform: rotate(10deg);
   transition: transform 300ms linear;
-  }
+}
+
+#project-img > img {
+  width: 2000px;
+}
+
+#code {
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  background-color: #3f3f41;
+  border: 2px solid #ffffff;
+}
 
 @keyframes jump {
   0% {
@@ -123,7 +136,10 @@
 @media only screen and (max-width: 700px) {
   #frontend > div > img,
   #backend > div > img,
-  #other > div > img {
+  #other > div > img,
+  #frontend > div > svg,
+  #backend > div > svg,
+  #other > div > svg {
     height: 50px;
     width: 70px;
   }
