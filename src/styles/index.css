@@ -80,7 +80,7 @@
 }
 
 #project-img > img {
-  width: 2000px;
+  max-width: 2500px;
 }
 
 #code {

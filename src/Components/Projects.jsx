@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Fade, Zoom } from "react-awesome-reveal";
 
 import TennisApp from "./Projects/TennisApp";
+import BlogApi from "./Projects/BlogApi";
 
 export default function Projects() {
     const [welcome, setWelcome] = useState(true);
@@ -35,7 +36,12 @@ export default function Projects() {
                             <Zoom triggerOnce>
                                 <h1 className="text-center text-4xl sm:text-6xl font-popcorn">Projects</h1>
                             </Zoom>
-                            <TennisApp />
+                            <Zoom triggerOnce delay={250}>
+                                <TennisApp />
+                            </Zoom>
+                            <Zoom triggerOnce delay={250}>
+                                <BlogApi />
+                            </Zoom>
                         </section>
                     </div>
                 </>
@@ -43,10 +49,6 @@ export default function Projects() {
         
         </>
     )
-}
-
-function BlogApi() {
-
 }
 
 function InventoryApp() {
