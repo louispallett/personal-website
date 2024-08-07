@@ -42,9 +42,14 @@ export default function TennisApp() {
                     </div>
                 </div>
                 <hr  className="mx-15 m-5"/>
-                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center text-semibold">Long Description</h2>
-                <div className="flex gap-2.5">
-                    <div className="flex flex-col gap-2.5 text-sm sm:text-base">
+                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Long Description</h2>
+                <div className="flex flex-col sm:flex-row gap-2.5">
+                    <Fade delay={750} triggerOnce>
+                    <div className="w-64 flex flex-1 justify-center items-center">
+                        <img src={tennisImg} alt="" />
+                    </div>
+                    </Fade>
+                    <div className="flex text-right flex-col gap-2.5 text-sm sm:text-base">
                         <p>This application represents the sum of my learning in web development. It is a full-stack application handling user accounts (sign-up and sign-in), CRUD operations, and much more.</p>
                         <p>
                             Every year, my tennis club hosts an 'In-House Tournament', which runs over several months in the summer. There are five categories: Mens Singles, Womens Singles, Mens Doubles, Womens Doubles, and Mixed Doubles. In previous years, the way this has been run is very hands-on: email the organiser expressing interest 
@@ -53,11 +58,6 @@ export default function TennisApp() {
                         </p>
                         <p>It's was a demanding and very 'hands-on' role to organise.</p>
                     </div>
-                    <Fade delay={1000} triggerOnce>
-                        <div id="project-img">
-                            <img src={tennisImg} alt="" />
-                        </div>
-                    </Fade>
                 </div>
                 <div className="flex flex-col gap-2.5 text-sm sm:text-base my-2.5">
                     <p>
@@ -81,13 +81,14 @@ export default function TennisApp() {
                         </ul>
                     </ul>
                 </div>
-                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center text-semibold">Video: See it in action</h2>
+                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Video: See it in action</h2>
                 <p className="text-center">- - -Insert Video HERE- - -</p>
-                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center text-semibold">Technical Highlights</h2>
+                <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Technical Highlights</h2>
                 <div className="flex flex-col gap-2.5 text-sm sm:text-base my-2.5">
-                    <p>
-                        This application uses a variety of technical tools and libraries. A full list can be found in the client/package.json and server/package.json files and more extensive list can be found on the repository's README file.
-                    </p>
+                <p>
+                    This application uses a variety of technical tools and libraries. A full list can be found in the client/package.json and server/package.json files and more extensive list can be found on the repository's README file.
+                    However, there are some features I am particularly proud of:
+                </p>
                 </div>
                 <CreateTournament />
             </div>

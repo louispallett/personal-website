@@ -79,10 +79,6 @@
   transition: transform 300ms linear;
 }
 
-#project-img > img {
-  max-width: 2500px;
-}
-
 #code {
   font-family: 'Courier New', Courier, monospace;
   border-radius: 5px;

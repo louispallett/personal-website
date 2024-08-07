@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 import TennisApp from "./Projects/TennisApp";
 import BlogApi from "./Projects/BlogApi";
@@ -49,24 +49,4 @@ export default function Projects() {
         
         </>
     )
-}
-
-function InventoryApp() {
-
-}
-
-function WeatherApp() {
-
-}
-
-function PersonalWebsite() {
-
-}
-
-function KnightTravails() {
-
-}
-
-function AlgorithmsInC() {
-
 }
