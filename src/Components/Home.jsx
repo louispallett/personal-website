@@ -245,7 +245,7 @@ function Technical() {
 
 function SoftSkills() {
     return (
-        <section className="flex flex-col items-center mr-2.5 p-2.5 bg-lime-500 dark:bg-lime-600 rounded-se-3xl lg:rounded-se-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+        <section className="flex flex-col items-center mr-2.5 p-2.5 bg-lime-500 dark:bg-lime-700 rounded-se-3xl lg:rounded-se-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
             <section>
                 <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
                     <Slide triggerOnce >
