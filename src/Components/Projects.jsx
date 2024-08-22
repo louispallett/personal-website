@@ -33,9 +33,9 @@ export default function Projects() {
             ) : (
                 <>
                     <div className="grid justify-center max-w-full">
-                        <section className="flex flex-col p-2.5 sm:p-5 sm:min-w-minArticle sm:max-w-maxArticle dark:text-slate-100">
+                        <section className="flex flex-col sm:p-5 sm:min-w-minArticle sm:max-w-maxArticle dark:text-slate-100">
                             <Zoom triggerOnce>
-                                <h1 className="text-center text-4xl sm:text-6xl font-popcorn">Projects</h1>
+                                <h1 className="text-center text-4xl sm:text-6xl my-2.5 font-popcorn">Projects</h1>
                             </Zoom>
                             <Zoom triggerOnce delay={250}>
                                 <TennisApp />
@@ -77,7 +77,7 @@ function OtherStuff() {
                             </p>
                             <p className="text-center">This application does <i>not</i> use React, but is instead built with a template language (in this case Pug).</p>
                             <div className="flex justify-center">
-                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">GitHub Repo</button></a>
+                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">&gt; GitHub Repo &lt;</button></a>
                             </div>
                         </div>
                     </li>
@@ -90,7 +90,7 @@ function OtherStuff() {
                             </p>
                             <p className="text-center">This is written in pure JavaScript.</p>
                             <div className="flex justify-center">
-                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">GitHub Repo</button></a>
+                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">&gt; GitHub Repo &lt;</button></a>
                             </div>
                         </div>
                     </li>
