@@ -43,7 +43,7 @@ export default function Home() {
                     <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100">
                         <div className="flex items-center gap-5">
                             <Fade triggerOnce delay={1000}>
-                                <img src={homeImg} className="w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
+                                <img src={homeImg} className="w-40 sm:w-72 md:w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
                             </Fade>
                             <div>
                                 <div className="flex flex-1 text-3xl sm:text-5xl md:text-7xl">
@@ -78,23 +78,23 @@ function AboutMe() {
         <section className="flex flex-col items-center p-2.5 ml-2.5 bg-indigo-500 dark:bg-indigo-600 rounded-ss-2xl lg:rounded-ss-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
             <section className="lg:pl-52 max-w-maxArticle dark:text-slate-100">
                 <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">About Me</h3>
-                <p className="my-2.5 text-lg">
+                <p className="my-2.5">
                     Based in the city of Bristol, UK, I am a History graduate and self-taught web developer. 
                 </p>
-                <p className="my-2.5 sm:text-lg">
+                <p className="my-2.5">
                     In early 2023, I started teaching myself web design. I started off with <a href="" className="hover:text-lime-500 transition-all"><b>The Odin Project</b></a>'s course in full-stack web development, covering a range of topics: 
                     from the basics of HTML, CSS, and JavaScript, to modern frontend frameworks, such as <a href="" className="hover:text-lime-500 transition-all"><b>React</b></a>, and backend frameworks using NodeJS, such as <a href="" className="hover:text-lime-500 transition-all"><b>Express</b></a>, 
                     along with NoSQL data handling with <a href="" className="hover:text-lime-500 transition-all"><b>MongoDB</b></a>.
                 </p>
-                <p className="my-2.5 sm:text-lg">
+                <p className="my-2.5">
                     Along with The Odin Project, I also completed Harvard's <a href="" className="hover:text-lime-500 transition-all"><b>CS50x: An Introduction to Computer Science</b></a>, covering core concepts such as data structures, memory management, algorithms (specific algorithms like bubble sort, 
                     merge sort and binary search, as well as time and space complexity), using both C and Python.
                 </p>
-                <p className="my-2.5 sm:text-lg">
+                <p className="my-2.5">
                     Ensuring that I have a solid foundation in Computer Science, I completed <a href="" className="hover:text-lime-500 transition-all"><b>Code Chef</b></a>'s Data Structures and Algorithms course, which covers more advanced concepts such as Graphs, Bit Manipulation, Number Theory, and Tries. Whilst it's entirely possible to build websites without 
                     knowledge of and practice in these concepts, it's important when creating full-stack applications, especially when manipulating data on the backend. I used these concepts in a couple of my latest projects.
                 </p>
-                <p className="my-2.5 sm:text-lg">
+                <p className="my-2.5">
                     Finally, the most important contribution to teaching myself web development has been building projects. This is the best way to learn and I've been building small projects as part of my web development journey since week 1. You'll find my latest projects on the <Link to="/projects" className="hover:text-lime-500 transition-all"><b>Projects Page</b></Link>.
                 </p>
             </section>
@@ -277,7 +277,7 @@ function SoftSkills() {
                 <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
                     <Slide triggerOnce >
                         <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
-                        <p className="sm:text-lg">
+                        <p>
                             Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
                             and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
                             Office for Students (OfS).
