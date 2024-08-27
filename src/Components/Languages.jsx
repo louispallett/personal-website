@@ -396,28 +396,30 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
         <Dialog as="div" open={isOpen != false ? true : false} onClose={() => setIsOpen(false)} className="relative z-50 m-0 p-0">
             <div className="fixed inset-0 flex w-screen items-center justify-center sm:p-4">
                 <Dialog.Panel as="div" className="max-w-2xl space-y-4 p-6 sm:p-12 bg-slate-100 rounded-lg shadow-[5px_5px_0px_0px_#4f46e5] dark:bg-slate-800 dark:text-slate-50">
-                    <h2 className="font-mania text-2xl text-center">{languageInfo.name}</h2>
-                    <div className="flex items-center flex-col gap-1 text-center sm:text-left sm:flex-row sm:justify-between">
-                        <p>{languageInfo.usage}</p>
-                        <img className="max-w-20 sm:max-w-36" src={languageInfo.img} alt={languageInfo.alt} />
-                    </div>
-                    {languageInfo && (
-                        languageInfo.projects.length > 0 && (
-                            <div className="flex flex-col gap-2.5 p-1">
-                                <h3 className="text-lg font-semibold">Projects</h3>
-                                <hr />
-                                <p>{languageInfo.projectsInto}</p>
-                                <div className="flex flex-col gap-2.5">
-                                    {languageInfo.projects.map((item, index) => (
-                                        <Project key={index} data={item} />
-                                    ))}
+                    <Fade cascade>
+                        <h2 className="font-mania text-2xl text-center">{languageInfo.name}</h2>
+                        <div className="flex items-center flex-col gap-1 text-center sm:text-left sm:flex-row sm:justify-between">
+                            <p>{languageInfo.usage}</p>
+                            <img className="max-w-20 sm:max-w-36" src={languageInfo.img} alt={languageInfo.alt} />
+                        </div>
+                        {languageInfo && (
+                            languageInfo.projects.length > 0 && (
+                                <div className="flex flex-col gap-2.5 p-1">
+                                    <h3 className="text-lg font-semibold">Projects</h3>
+                                    <hr />
+                                    <p>{languageInfo.projectsInto}</p>
+                                    <div className="flex flex-col gap-2.5">
+                                        {languageInfo.projects.map((item, index) => (
+                                            <Project key={index} data={item} />
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    )}
-                    <div className="flex w-full">
-                        <button className="rounded-md flex-1 bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all" onClick={() => setIsOpen(false)}><b>Close</b></button>
-                    </div>
+                            )
+                        )}
+                        <div className="flex w-full">
+                            <button className="rounded-md flex-1 bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all" onClick={() => setIsOpen(false)}><b>Close</b></button>
+                        </div>
+                    </Fade>
                 </Dialog.Panel>
                 </div>
         </Dialog>
