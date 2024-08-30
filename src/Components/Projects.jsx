@@ -4,6 +4,7 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import BlogApi from "./Projects/BlogApi";
 import ChapterNumbering from "./Projects/ChapterNumbering";
 import TennisApp from "./Projects/TennisApp";
+import WeatherApp from "./Projects/WeatherApp";
 
 export default function Projects() {
     const [welcome, setWelcome] = useState(true);
@@ -45,6 +46,9 @@ export default function Projects() {
                             </Zoom>
                             <Zoom triggerOnce delay={250}>
                                 <ChapterNumbering />
+                            </Zoom>
+                            <Zoom triggerOnce delay={250}>
+                                <WeatherApp />
                             </Zoom>
                             <Fade triggerOnce delay={250}>
                                 <OtherStuff />
