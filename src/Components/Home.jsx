@@ -40,7 +40,7 @@ export default function Home() {
                 </section>
             ) : (
                 <>
-                    <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100">
+                    <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100 max-w-full">
                         <div className="flex items-center gap-5">
                             <Fade triggerOnce delay={1000}>
                                 <img src={homeImg} className="w-40 sm:w-72 md:w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />

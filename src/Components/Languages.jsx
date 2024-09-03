@@ -368,7 +368,7 @@ const getLanguageInfo = (language) => {
                                     are not particularly skilled with computers and struggle to create these graphs and charts. So, occassionally I've stepped in and made them using Python and Matplotlib. I obviously
                                     can't show those creations for copyright reasons (as they were used in the book), but in my spare time, I did practice by taking some freely available csv files and writing a basic 
                                     programme to create some charts and graphs from them.`,
-                        repo: "https://github.com/louispallett/py-stats/blob/main/main.py"
+                        repo: "https://github.com/louispallett/py-stats/tree/main"
                     }
                 ]
             }
@@ -400,7 +400,7 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
                         <h2 className="font-mania text-2xl text-center">{languageInfo.name}</h2>
                         <div className="flex items-center flex-col gap-1 text-center sm:text-left sm:flex-row sm:justify-between">
                             <p>{languageInfo.usage}</p>
-                            <img className="max-w-20 sm:max-w-36" src={languageInfo.img} alt={languageInfo.alt} />
+                            <img className="hidden sm:block sm:max-w-36" src={languageInfo.img} alt={languageInfo.alt} />
                         </div>
                         {languageInfo && (
                             languageInfo.projects.length > 0 && (

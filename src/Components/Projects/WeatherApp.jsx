@@ -4,9 +4,9 @@ import sonImg from "/assets/images/son-image.svg";
 
 export default function WeatherApp() {
     return (
-        <section className="border-4 my-5 border-slate-800 dark:border-slate-100 text-slate-50 rounded-lg bg-indigo-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
-            <div className="p-2.5 sm:p-5">
-                <h1 className="text-center text-xl sm:text-2xl my-2.5 font-montserrat">YAWA - Yet Another Weather App</h1>
+        <section className="my-5 dark:text-slate-50 max-w-maxArticle">
+            <div className="p-2.5 sm:p-5 text-sm sm:text-base">
+                <h1 className="text-center text-2xl sm:text-4xl my-2.5 font-popcorn">YAWA - Yet Another Weather App</h1>
                 <hr  className="mx-15 m-5"/>
                 <div className="md:grid md:grid-cols-2">
                     <div>
@@ -17,12 +17,12 @@ export default function WeatherApp() {
                         <div className="flex items-center md:justify-end">
                             <div className="flex flex-col sm:items-end">
                                 <p className="text-xs sm:text-sm my-1"><b>Frontend</b></p>
-                                <div className="flex gap-2.5">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="h-4 sm:h-6" />
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="h-4 sm:h-6" />
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="h-4 sm:h-6"/>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" className="h-4 sm:h-6"/>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" className="h-4 sm:h-6"/>
+                                <div className="flex gap-2.5 bg-indigo-600 p-1.5 rounded-md">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="h-8 md:h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="h-8 md:h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="h-8 md:h-10"/>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" className="h-8 md:h-10"/>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" className="h-8 md:h-10"/>
                                 </div>
                             </div>
                         </div>
@@ -38,13 +38,13 @@ export default function WeatherApp() {
                 </div>
                 <hr  className="mx-15 m-5"/>
                 <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Long Description</h2>
-                <div className="flex gap-2.5 my-2.5">
+                <div className="flex my-2.5">
                     <Fade delay={750} triggerOnce>
                         <div className="hidden md:block w-64">
                             <img src="https://www.svgrepo.com/show/440537/sun.svg" alt="" />
                         </div>
                     </Fade>
-                    <div className="flex flex-col gap-2.5 text-right text-sm sm:text-base">
+                    <div className="flex flex-col gap-2.5 sm:text-right">
                         <p>
                            This is an older application I wrote in mid-2023, before I learned React and server-side programming. It's built using Webpack as a compiler and uses SASS for writing SCSS, but it doesn't use a 
                            CSS framework. 
@@ -62,7 +62,7 @@ export default function WeatherApp() {
                 <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Video: See it in action</h2>
                 <p className="text-center">- - -Insert Video HERE- - -</p>
                 <h2 className="font-montserrat text-lg my-5 sm:text-xl text-center font-semibold">Technical Highlights</h2>
-                <div className="flex flex-col gap-2.5 text-sm sm:text-base my-2.5">
+                <div className="flex flex-col gap-2.5 my-2.5">
                     <p>
                         This application uses a variety of technical tools and libraries. A full list can be found in the package.json file and more extensive list can be found on the repository's README file.
                         However, there are some features I am particularly proud of:

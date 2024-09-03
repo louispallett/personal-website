@@ -6,7 +6,7 @@ export default function App() {
         <BackgroundContainer >
             <Header />
             <div className="flex flex-1 justify-center">
-                <div className="grid flex-1 max-w-full max-w-screen-3xl md:mt-24 font-roboto">
+                <div className="grid flex-1 max-w-full justify-center max-w-screen-3xl md:mt-24 font-roboto">
                     <Outlet />
                 </div>
             </div>  
