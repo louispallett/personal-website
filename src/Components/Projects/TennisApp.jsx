@@ -54,7 +54,7 @@ export default function TennisApp() {
                 </div>
                 <div className="flex gap-2.5 justify-center items-center my-1.5">
                     <div className="flex justify-center">
-                        <a href="https://github.com/louispallett/lowpal-tennis" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-indigo-600 transition-all">&gt; GitHub Repo &lt;</button></a>
+                        <a href="https://github.com/louispallett/lowpal-tennis" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-slate-800 transition-all">&gt; GitHub Repo &lt;</button></a>
                     </div>
                     <div className="flex items-center">
                         <div className="flex justify-center">
@@ -174,7 +174,7 @@ function CreateTournament() {
             <div className={showLogic ? "block" : "hidden"}>
                 <div className="flex flex-col gap-2.5 text-sm sm:text-base my-2.5">
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code1}</pre>
                         </div>
                     </Fade>
@@ -200,13 +200,13 @@ function CreateTournament() {
                     <p>After which, we create the finalMatch and then create the rest of the matches.</p>
                     <h2 className="sm:text-lg font-semibold text-center">Creating Matches</h2>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code2}</pre>
                         </div>
                     </Fade>
                     <p>This creates our matches. Each match effectively has a "pointer" to it's next match. In Computer Science, we might call this an inverted binary tree:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code3}</pre>
                         </div>
                     </Fade>
@@ -215,7 +215,7 @@ function CreateTournament() {
                         from the 'inside-out', starting with the Math.ceil(mid) point. So, in the case of 10 players, we would have 2 qualifying matches leading to the [2] index and then the [1] index. Like so:
                     </p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code4}</pre>
                         </div>
                     </Fade>
@@ -240,19 +240,19 @@ function CreateTournament() {
                     <p>Now, let's move on to qualifying players and how the algorithm adds them to their matches in the first non-qualifying round.</p>
                     <p>In the case of 9 players, we will have 4 QF matches with 1 qualifying match, which would lead to match[2]. Because we have already added our qualifying players, our _teams array looks like this:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code5}</pre>
                         </div>
                     </Fade>
                     <p>At this point, we could quite simply add the players in a staggered method, going outside in, starting at 1:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code6}</pre>
                         </div>
                     </Fade>
                     <p><b>However</b>, this does not work in the case of 16 players. Here's why:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code7}</pre>
                         </div>
                     </Fade>
@@ -263,26 +263,26 @@ function CreateTournament() {
                     </p>
                     <p>The solution is to divide the match array into two arrays, like so:</p>
                     <Fade triggerOnce >
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code8}</pre>
                         </div>
                     </Fade>
                     <p>Thankfully, the job is made a little simpler by the fact that all players in the left hand side array are the odd ranking players, whilst those in the right are the even ranking players.</p>
                     <p>So, we loop through an index value <i>(i)</i> and start at either 0 (for the left array) or 1 (for the right array) and increment by 2:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code9}</pre>
                         </div>
                     </Fade>
                     <p>We then loop through the even players, starting our index at 1 (player 2), incrementing by 2 again, but ensuring we add players staggered yet starting from the <i>last</i> match first:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code10}</pre>
                         </div>
                     </Fade>
                     <p>We now have all our matches with their players assigned. However, they are divided into different arrays, so we now need to join them. Arrays are not primitive, so we use the spread operator here:</p>
                     <Fade triggerOnce>
-                        <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                        <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <pre>{code11}</pre>
                         </div>
                     </Fade>

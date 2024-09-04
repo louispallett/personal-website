@@ -77,7 +77,7 @@ export default function ChapterNumbering() {
                         This script solves this issue by renaming all files in a directory according to the rule already set out. The only condition is that the files have to already be in order otherwise, of course, there is no way of knowing which chapter to do first.
                         The primary body of the programme is this, written in Bash:
                     </p>
-                    <div id="code" className="text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                    <div id="code" className="border-2 border-slate-900 dark:border-slate-50 text-xs sm:text-sm shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                         <pre>{code}</pre>
                     </div>
                     <p>
