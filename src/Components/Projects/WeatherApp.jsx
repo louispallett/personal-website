@@ -13,10 +13,10 @@ export default function WeatherApp() {
                         <p className="my-1.5"><b>Type</b>: frontend</p>
                         <p><b>Short Description</b>: <i>YAWA - Yet Another Weather App</i> is a simple weather frontend application using data fetched from an external API.</p>
                     </div>
-                    <div className="self-center">
+                    <div className="flex flex-col items-center md:items-end my-2.5">
                         <div className="flex items-center md:justify-end">
-                            <div className="flex flex-col sm:items-end">
-                                <p className="text-xs sm:text-sm my-1"><b>Frontend</b></p>
+                            <div className="flex flex-col md:items-end">
+                                <p className="text-xs sm:text-sm my-1 text-center"><b>Frontend</b></p>
                                 <div className="flex gap-2.5 bg-indigo-600 p-1.5 rounded-md">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="h-8 md:h-10" />
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="h-8 md:h-10" />
