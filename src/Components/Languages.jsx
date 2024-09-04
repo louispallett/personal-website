@@ -1,25 +1,3 @@
-/*
-====================
-Refactoring
-====================
-
-At the moment the way we do this is a little sloppy and quite verbose. Since JSX is just JS, we might be able to do this in a better way:
-
-    1 Create ONE component ("LanguagePopUp").
-    2 This also means we create ONE state hook in Home.jsx
-    3 The only thing that differs between each one is content. So, we need to create a conditional based on an argument
-    that is passed:
-
-        NOTE: because of the way booleans work in JS, strings are still true, so we can instead set the state hook to the language and 
-        still have the Component show under open={isOpen}, because if isOpen == "babel", isOpen is true!
-
-    4 Create a switch statement where the content is changed based on the value of isOpen. Then, we only have one component, one hook, and the 
-    content can be changed via variables or js objects.
-
-    I would do this in a new branch.
-
-*/
-
 import { Dialog } from '@headlessui/react'
 import { Fade } from 'react-awesome-reveal'
 
@@ -433,7 +411,7 @@ function Project({ data }) {
             <p className="text-sm sm:text-base">{data.description}</p>
             <div className="flex justify-center items-center gap-2.5 my-2.5 flex-col sm:flex-row">
                 {data.repo && (<p><a href={data.repo} target="_blank"><button className="p-1 px-1.5 text-slate-50 font-semibold rounded-md bg-slate-900 text-sm sm:text-base hover:bg-slate-950 transition-all">&gt; GitHub Repo &lt;</button></a></p>)}
-                {data.site && (<p><a href={data.site} target="_blank"><button className="p-1 px-1.5 text-slate-50 font-semibold rounded-md bg-lime-600 hover:bg-lime-700 transition-all">&gt; Live Site &lt;</button></a></p>)}
+                {data.site && (<p><a href={data.site} target="_blank"><button className="p-1 px-1.5 text-slate-50 font-semibold rounded-md bg-lime-600 hover:bg-lime-700 text-sm sm:text-base transition-all">&gt; Live Site &lt;</button></a></p>)}
             </div>
         </div>
     )
