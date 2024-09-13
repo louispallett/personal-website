@@ -34,7 +34,7 @@ export default function CV() {
 
 function DownloadCV() {
     return (
-        <a href={cv} download="louis_nicholson_pallett_cv.pdf" className="flex justify-center items-center gap-2.5 bg-blue-500 hover:bg-blue-700 text-white font-semibold text-sm py-2 px-4 rounded-md transition-all">
+        <a href={cv} download="louis_nicholson_pallett_cv.pdf" className="flex justify-center items-center gap-2.5 bg-blue-500 hover:bg-blue-700 text-white font-semibold text-sm py-2 px-4 rounded-md border-2 border-slate-950 dark:border-slate-100 transition-all">
             <p>Download CV</p>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -50,10 +50,10 @@ function DownloadCV() {
 function About() {
     return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">About Me</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">About Me</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <p>
                     I am a resourceful and accomplished Editorial Assistant seeking a change in career. I have over four years of experience
                     working in administrative, customer-facing, target-driven, and high demanding roles. Over the last 20 months, I have been
@@ -72,10 +72,10 @@ function About() {
 function Projects() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">Projects</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Projects</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <p>
                     You can find a list of highlighted projects on <a href="">my website</a>. These range from fullstack websites using NodeJS and Express to smaller programmes with 
                     specific uses in other languages (such as Bash and Python). Each project page has a detailed description, technical highlights, and a video demonstration (as well 
@@ -94,17 +94,17 @@ function Projects() {
 function TechSkills() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">Technical Skills</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:bg-indigo-500">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Technical Skills</h2>
             </div>
             <div className="flex flex-col gap-2.5">
-                <div className="flex flex-wrap justify-between gap-2.5">
+                <div className="flex md:flex-col flex-wrap justify-between gap-2.5">
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-50 p-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-green-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                             <p className="text-center"><b>Frontend</b></p>
                         </div>
-                        <div className="border-2 border-slate-50 p-2.5 rounded-md flex-1">
-                            <ul className="flex flex-wrap gap-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Bootstrap</li>
                                 <li>CSS</li>
                                 <li>HTML</li>
@@ -119,11 +119,11 @@ function TechSkills() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-50 p-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-blue-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                             <p className="text-center"><b>Backend</b></p>
                         </div>
-                        <div className="border-2 border-slate-50 p-2.5 rounded-md flex-1">
-                            <ul className="flex flex-wrap gap-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Express</li>
                                 <li>MongoDB</li>
                                 <li>MySQL</li>
@@ -132,11 +132,11 @@ function TechSkills() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-50 p-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-yellow-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                             <p className="text-center"><b>Other</b></p>
                         </div>
-                        <div className="border-2 border-slate-50 p-2.5 rounded-md flex-1">
-                            <ul className="flex flex-wrap gap-2.5">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                            <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Bash</li>
                                 <li>C</li>
                                 <li>Git</li>
@@ -157,10 +157,10 @@ function TechSkills() {
 function SoftSkills() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">Soft Skills</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:bg-pink-600">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Soft Skills</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
             <div className="pr-2.5 sm:pr-5">
                     <h4 className="font-semibold">Problem Solving</h4>
                     <p className="text-sm">
@@ -199,10 +199,10 @@ function SoftSkills() {
 function CareerHistory() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">Career History</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-green-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Career History</h2>
             </div>
-            <div className="flex flex-col gap-5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100">
+            <div className="flex flex-col gap-5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <div>
                     <div className="flex justify-between">
                         <h4 className="font-semibold">Editorial Assistant</h4>
@@ -254,10 +254,10 @@ function CareerHistory() {
 function Education() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100">
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-2.5">Formal Education</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-blue-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Formal Education</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100">
+            <div className="flex flex-col gap-2.5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <div>
                     <div className="flex justify-between">
                         <h4 className="font-semibold">University of Oxford</h4>

@@ -68,7 +68,13 @@ export default function WeatherApp() {
                         However, there are some features I am particularly proud of:
                     </p>
                     <ul className="list-disc ml-5 flex flex-col gap-2">
-                        <li></li>
+                        <li>
+                            <b>Dynamic Positioning</b>: This application, via CSS and SCSS, has a responsive layout depending on the size of the users screen.
+                        </li>
+                        <li>
+                            <b>Personalized styling based on API data</b>: This application uses the WeatherAPI data to determine how elements are presented. This is displayed in the image of the 
+                            weather (sun for sunny, an umbrella for rain, etc.), but also in the rotation of the arrow for the wind direction.
+                        </li>
                     </ul>
                 </div>
             </div>
