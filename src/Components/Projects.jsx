@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { ChevronDoubleDownIcon } from "@heroicons/react/16/solid";
 
-import BlogApi from "./Projects/BlogApi";
-import ChapterNumbering from "./Projects/ChapterNumbering";
-import TennisApp from "./Projects/TennisApp";
-import WeatherApp from "./Projects/WeatherApp";
-
 import sonImg from "/assets/images/son-image.svg";
 import tennisImg from "/assets/images/rackets.svg";
 
@@ -30,7 +25,7 @@ export default function Projects() {
 
     return (
         <>
-            {welcome ? (
+            { welcome ? (
                 <section className="flex items-center justify-center dark:text-slate-100">
                     <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
                         <p className="text-center">Projects</p>
@@ -77,7 +72,6 @@ export default function Projects() {
                     </div>
                 </>
             )}
-        
         </>
     )
 }
