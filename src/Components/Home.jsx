@@ -57,14 +57,10 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <Fade triggerOnce>
-                        <div className="flex justify-center items-center p-2.5">
-                            <ChevronDoubleDownIcon className="h-12 w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
-                        </div>
-                    </Fade>
-                    <JackInTheBox triggerOnce >
-                        <AboutMe />
-                    </JackInTheBox>
+                    <div className="flex justify-center items-center p-2.5">
+                        <ChevronDoubleDownIcon className="h-12 w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
+                    </div>
+                    <AboutMe />
                     <Technical />
                     <SoftSkills />
                 </>
@@ -130,14 +126,12 @@ function Technical() {
     return (
         <section className="flex flex-col items-center p-2.5">
             <section className="dark:text-slate-100 flex flex-col items-center">
-                <Slide triggerOnce >
-                    <div className="max-w-maxArticle text-center">
-                        <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Technical Skills and Knowledge</h3>
-                        <p className="sm:text-lg my-10">
-                            I've learned and used a lot of different languages and technologies over the last couple of years. I've listed them below - you can click on any of them to read more about my experience using them and what projects best demonstrate my usage of them.
-                        </p>
-                    </div>
-                </Slide>
+                <div className="max-w-maxArticle text-center">
+                    <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Technical Skills and Knowledge</h3>
+                    <p className="sm:text-lg my-10">
+                        I've learned and used a lot of different languages and technologies over the last couple of years. I've listed them below - you can click on any of them to read more about my experience using them and what projects best demonstrate my usage of them.
+                    </p>
+                </div>
                 <Fade cascade damping={0.25} triggerOnce delay={100} >
                     <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Frontend</h3>
                     <fieldset id="frontend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200 text-slate-50">
@@ -258,13 +252,11 @@ function Technical() {
                         </div>
                     </fieldset>
                 </Fade>
-                <Fade triggerOnce >
-                    <div className="max-w-maxArticle text-center">
-                        <p className="sm:text-lg my-10">
-                            To see these languages and technologies used in action, please see my recent projects in the Projects section.
-                        </p>
-                    </div>
-                </Fade>
+                <div className="max-w-maxArticle text-center">
+                    <p className="sm:text-lg my-10">
+                        To see these languages and technologies used in action, please see my recent projects in the Projects section.
+                    </p>
+                </div>
             </section>
         </section>
     )
@@ -275,44 +267,42 @@ function SoftSkills() {
         <section className="flex flex-col items-center mr-2.5 p-2.5 bg-lime-500 dark:bg-lime-700 rounded-se-3xl lg:rounded-se-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
             <section>
                 <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
-                    <Slide triggerOnce >
-                        <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
+                    <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
+                    <p>
+                        Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
+                        and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
+                        Office for Students (OfS).
+                    </p>
+                    <div className="text-right my-5 sm:ml-10">
+                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
                         <p>
-                            Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
-                            and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
-                            Office for Students (OfS).
+                            Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
+                            and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
                         </p>
-                        <div className="text-right my-5 sm:ml-10">
-                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
-                            <p>
-                                Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
-                                and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
-                            </p>
-                        </div>
-                        <div className="my-5 sm:mr-10">
-                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
-                            <p>
-                                Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
-                            </p>
-                        </div>
-                        <div className="text-right my-5 sm:ml-10">
-                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
-                            <p>
-                                Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
-                            </p>
-                        </div>
-                        <div className="my-5 sm:mr-10">
-                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
-                            <p>
-                                My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
-                                I am required to work independantly to hit challanging targets and short deadlines.
-                            </p>
-                        </div>
-                        <div className="text-right my-5 sm:ml-10">
-                            <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
-                            <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
-                        </div>
-                    </Slide>
+                    </div>
+                    <div className="my-5 sm:mr-10">
+                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
+                        <p>
+                            Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
+                        </p>
+                    </div>
+                    <div className="text-right my-5 sm:ml-10">
+                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
+                        <p>
+                            Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
+                        </p>
+                    </div>
+                    <div className="my-5 sm:mr-10">
+                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
+                        <p>
+                            My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
+                            I am required to work independantly to hit challanging targets and short deadlines.
+                        </p>
+                    </div>
+                    <div className="text-right my-5 sm:ml-10">
+                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
+                        <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
+                    </div>
                 </div>
             </section>
         </section>
