@@ -373,7 +373,7 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
     return (
         <Dialog as="div" open={isOpen != false ? true : false} onClose={() => setIsOpen(false)} className="relative z-50 m-0 p-0">
             <div className="fixed inset-0 flex w-screen items-center justify-center sm:p-4">
-                <Dialog.Panel as="div" className="max-w-2xl space-y-4 p-6 sm:p-12 bg-slate-100 rounded-lg shadow-[5px_5px_0px_0px_#4f46e5] dark:bg-slate-800 dark:text-slate-50">
+                <Dialog.Panel as="div" className="max-w-4xl space-y-4 p-6 sm:p-12 bg-slate-100 rounded-lg shadow-[5px_5px_0px_0px_#4f46e5] dark:bg-slate-800 dark:text-slate-50">
                     <Fade cascade>
                         <h2 className="font-mania text-2xl text-center">{languageInfo.name}</h2>
                         <div className="flex items-center flex-col gap-1 text-center sm:text-left sm:flex-row sm:justify-between">
