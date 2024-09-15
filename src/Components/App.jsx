@@ -45,7 +45,7 @@ function Header() {
 
 function Footer() {
     return (
-      <footer className="relative flex px-3 py-3 justify-between items-center rounded-lg m-1 my-2 bg-slate-200 dark:bg-slate-800 dark:text-slate-100 sm:px-5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+      <footer className="relative flex px-3 py-3 justify-between items-center rounded-lg m-1 my-2 bg-slate-100 dark:bg-slate-800 dark:text-slate-100 sm:px-5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
         <div>          
             <p className="font-bold text-xs py-5 sm:text-sm">© 2024 LowPal/Louis Nicholson-Pallett</p>
         </div>

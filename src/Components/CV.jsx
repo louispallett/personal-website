@@ -1,34 +1,74 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
+
 import cv from "/documents/cv.pdf"
 
 export default function CV() {
+    const [welcome, setWelcome] = useState(true);
+    const [exiting, setExiting] = useState(false);
+
+    useEffect(() => {
+        const handleWelcome = () => {
+            setTimeout(() => {
+                setExiting(true);
+            }, 1000);
+            setTimeout(() => {
+                setWelcome(false);
+                localStorage.setItem('hasWelcomed', 'true'); 
+            }, 2000);
+        }
+        handleWelcome();
+    }, []);
+
     return (
-        <section className="my-5 dark:text-slate-50">
-            <div className="p-2.5 sm:p-5 text-sm sm:text-base">
-                <h1 className="text-center text-2xl sm:text-4xl my-2.5 font-bold italic">Curriculum Vitae</h1>
-                <div className="flex justify-center my-5">
-                    <DownloadCV />
-                </div>
-                <h2 className="text-xl sm:text-3xl text-center font-bold my-5">Louis Nicholson-Pallett</h2>
-                <div className="text-center my-2.5">
-                    <p>+44 7513646798</p>
-                    <p>louis.pallett@outlook.com</p>
-                    <p>Bristol</p>
-                </div>
-                <hr  className="mx-8 sm:mx-16 md:mx-24"/>
-                <div className="flex flex-col md:grid md:grid-cols-2 my-5 gap-5 md:gap-2.5">
-                    <About />
-                    <Projects />
-                </div>
-                <div className="flex flex-col lg:grid lg:grid-cols-2 my-5 gap-5 md:gap-2.5">
-                    <TechSkills />
-                    <SoftSkills />
-                </div>
-                <div className="flex flex-col gap-5">
-                    <CareerHistory />
-                    <Education />
-                </div>
-            </div>
-        </section>
+        <>
+            {welcome ? (
+                <section className="flex items-center justify-center dark:text-slate-100">
+                    <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
+                        <p className="text-center">CV</p>
+                    </div>
+                </section>
+            ) : (
+                <section className="my-5 dark:text-slate-50">
+                    <div className="p-2.5 sm:p-5 text-sm sm:text-base">
+                        <Fade triggerOnce delay={500}>
+                            <h1 className="text-center text-2xl sm:text-4xl my-2.5 font-bold italic">Curriculum Vitae</h1>
+                        </Fade>
+                        <div className="flex justify-center my-5">
+                            <Zoom triggerOnce delay={500}>
+                                <DownloadCV />
+                            </Zoom>
+                        </div>
+                        <Fade triggerOnce delay={500}>
+                            <h2 className="text-xl sm:text-3xl text-center font-bold my-5">Louis Nicholson-Pallett</h2>
+                            <div className="text-center my-2.5">
+                                <p>+44 7513646798</p>
+                                <p>louis.pallett@outlook.com</p>
+                                <p>Bristol</p>
+                            </div>
+                        </Fade>
+                        <hr  className="mx-8 sm:mx-16 md:mx-24"/>
+                        <div className="flex flex-col md:grid md:grid-cols-2 my-5 gap-5 md:gap-2.5">
+                            <Slide triggerOnce>
+                                <About />
+                            </Slide>
+                            <Slide triggerOnce direction="right">
+                                <Projects />
+                            </Slide>
+                        </div>
+                        <div className="flex flex-col lg:grid lg:grid-cols-2 my-5 gap-5 md:gap-2.5">
+                            <TechSkills />
+                            <SoftSkills />
+                        </div>
+                        <div className="flex flex-col gap-5">
+                            <CareerHistory />
+                            <Education />
+                        </div>
+                    </div>
+                </section>    
+            )}
+        </>
     )
 }
 
@@ -77,13 +117,13 @@ function Projects() {
             </div>
             <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <p>
-                    You can find a list of highlighted projects on <a href="">my website</a>. These range from fullstack websites using NodeJS and Express to smaller programmes with 
+                    You can find a list of highlighted projects on <Link to="/projects" className="hover:text-lime-500 transition-all font-semibold">my website</Link>. These range from fullstack websites using NodeJS and Express to smaller programmes with 
                     specific uses in other languages (such as Bash and Python). Each project page has a detailed description, technical highlights, and a video demonstration (as well 
                     as links to the repositories and, if applicable, live site).
                 </p>
                 <p>
                     My most recent project is a web application to help run a large tennis tournament for my tennis club. It combines a great deal of my knowledge 
-                    of web development and algorithms to generate a full-stack application with real-world usage. Click <a href="" className="hover:text-lime-500 transition-all font-semibold">here</a> to 
+                    of web development and algorithms to generate a full-stack application with real-world usage. Click <Link to="/projects" className="hover:text-lime-500 transition-all font-semibold">here</Link> to 
                     go to the project's page on my website.
                 </p>
             </div>
@@ -93,12 +133,12 @@ function Projects() {
 
 function TechSkills() {
 	return (
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-1 flex-col gap-2.5">
             <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:bg-indigo-500">
                 <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Technical Skills</h2>
             </div>
-            <div className="flex flex-col gap-2.5">
-                <div className="flex md:flex-col flex-wrap justify-between gap-2.5">
+            <div className="flex flex-1 flex-col gap-2.5">
+                <div className="flex flex-col sm:flex-row md:flex-col flex-1 flex-wrap justify-between gap-2.5">
                     <div className="flex-1 flex flex-col gap-2.5">
                         <div className="border-2 border-slate-950 dark:border-slate-50 bg-green-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                             <p className="text-center"><b>Frontend</b></p>
@@ -161,7 +201,7 @@ function SoftSkills() {
                 <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Soft Skills</h2>
             </div>
             <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-            <div className="pr-2.5 sm:pr-5">
+                <div className="pr-2.5 sm:pr-5">
                     <h4 className="font-semibold">Problem Solving</h4>
                     <p className="text-sm">
                         My current and previous roles have required me to identify and work on problems. I have always done this by breaking down large problems into smaller steps: thinking about what the actual problem is, 
@@ -189,7 +229,10 @@ function SoftSkills() {
                 </div>
                 <div className="pr-2.5 sm:pr-5">
                     <h4 className="font-semibold">Teamwork</h4>
-                    <p className="text-sm"></p>
+                    <p className="text-sm">
+                        I've worked as part of different teams both within my own and across departments, completing numerous tasks and working together towards shared targets and aims. I am quick to 
+                        create professional relationships with team members and have successfully been part of several teams.
+                    </p>
                 </div>
             </div>
         </div>
@@ -204,7 +247,7 @@ function CareerHistory() {
             </div>
             <div className="flex flex-col gap-5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <div>
-                    <div className="flex justify-between">
+                    <div className="md:flex justify-between">
                         <h4 className="font-semibold">Editorial Assistant</h4>
                         <p>June 2021 - (current)</p>
                     </div>
@@ -220,7 +263,7 @@ function CareerHistory() {
                 </div>
                 <hr className="mx-5 sm:mx-10"/>
                 <div>
-                    <div className="flex justify-between">
+                    <div className="md:flex justify-between">
                         <h4 className="font-semibold">Indexer</h4>
                         <p>March 2020 - June 2021</p>
                     </div>
@@ -234,7 +277,7 @@ function CareerHistory() {
                 </div>
                 <hr className="mx-5 sm:mx-10"/>
                 <div>
-                    <div className="flex justify-between">
+                    <div className="md:flex justify-between">
                         <h4 className="font-semibold">Data Analyst</h4>
                         <p>November 2019 - February 2020</p>
                     </div>
@@ -259,7 +302,7 @@ function Education() {
             </div>
             <div className="flex flex-col gap-2.5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                 <div>
-                    <div className="flex justify-between">
+                    <div className="md:flex justify-between">
                         <h4 className="font-semibold">University of Oxford</h4>
                         <p>October 2018 - August 2019</p>
                     </div>
@@ -269,7 +312,7 @@ function Education() {
                     </div>
                 </div>
                 <div>
-                    <div className="flex justify-between">
+                    <div className="md:flex justify-between">
                         <h4 className="font-semibold">Royal Holloway, University of London</h4>
                         <p>September 2015 - July 2018</p>
                     </div>
