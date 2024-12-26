@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "roboto";
+    src: 
+    url("/assets/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Roboto-Regular.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "mania";
+    src: url("/assets/fonts/SchoolMania-vmwBA.woff2") format("woff2");
+}
+  
+@font-face {
+    font-family: "popcorn";
+    src: url("/assets/fonts/EnjoyPopcornBold-MVxye.woff2") format("woff2");
+    src: url("/assets/fonts/EnjoyPopcornBold-MVxye.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "nanum";
+    src: url("/assets/fonts/NanumPenScript-Regular.woff2") format("woff2");
+    src: url("/assets/fonts/NanumPenScript-Regular.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "montserrat";
+    src: url("/assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+    src: url("/assets/fonts/Montserrat-VariableFont_wght.woff") format("woff");
+}

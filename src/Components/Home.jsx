@@ -28,14 +28,17 @@ export default function Home() {
     return (
         <>
             {welcome ? (
-                <section className="flex items-center justify-center my-28 mb-48 dark:text-slate-100">
-                    <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
+                <section id="flex-center" className="my-28 mb-48">
+                    <div 
+                        id="welcome-element" 
+                        className={exiting ? "animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "animate-fade-down animate-duration-1000 animate-ease-in-out"}
+                    >
                         <p className="text-center">Home</p>
                     </div>
                 </section>
             ) : (
                 <>
-                    <section className="flex items-center justify-center my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100 max-w-full">
+                    <section id="flex-center" className="my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100 max-w-full">
                         <div className="flex items-center gap-5">
                             <Fade triggerOnce delay={1000}>
                                 <img src={homeImg} className="w-40 sm:w-72 md:w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
@@ -52,7 +55,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center items-center p-2.5">
+                    <div id="flex-center" className="p-2.5">
                         <ChevronDoubleDownIcon className="h-12 w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
                     </div>
                     <AboutMe />
@@ -106,8 +109,8 @@ function Technical() {
                     </p>
                 </div>
                 <Fade cascade damping={0.25} triggerOnce delay={100} >
-                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Frontend</h3>
-                    <fieldset id="frontend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200 text-slate-50">
+                    <h3 className="arch-headers">Frontend</h3>
+                    <fieldset className="language-container">
                         <div onClick={() => setIsOpen("babel")}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg" />
                             <p>Babel</p>
@@ -168,8 +171,8 @@ function Technical() {
                     <LanguageBox isOpen={isOpen} setIsOpen={setIsOpen} />
                 </Fade>
                 <Fade cascade damping={0.25} triggerOnce delay={100} >
-                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Backend</h3>
-                    <fieldset id="backend" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] border-slate-900 dark:border-slate-200 text-slate-50">
+                    <h3 className="arch-headers">Backend</h3>
+                    <fieldset className="language-container">
                         <div onClick={() => setIsOpen("express")}>
                             <svg viewBox="0 0 128 128">
                                 <path fill="#ffffff" d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21 6.45-8.55 12.8-16.67 18.8-25.11 2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08zm5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57-15-.12-25.78 11.02-26.43 27.57z"></path>
@@ -189,8 +192,8 @@ function Technical() {
                     </fieldset>
                 </Fade>
                 <Fade cascade damping={0.25} triggerOnce delay={100} >
-                    <h3 className="text-xl sm:text-2xl my-2.5 font-popcorn">Other</h3>
-                    <fieldset id="other" className="sm:max-w-minArticle shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] text-slate-50 border-slate-900 dark:border-slate-200">
+                    <h3 className="arch-headers">Other</h3>
+                    <fieldset className="language-container">
                         <div onClick={() => setIsOpen("bash")}>
                             <svg viewBox="0 0 128 128">
                                 <path fill="#ffffff" d="M109.01 28.64L71.28 6.24c-2.25-1.33-4.77-2-7.28-2s-5.03.67-7.28 2.01l-37.74 22.4c-4.5 2.67-7.28 7.61-7.28 12.96v44.8c0 5.35 2.77 10.29 7.28 12.96l37.73 22.4c2.25 1.34 4.76 2 7.28 2 2.51 0 5.03-.67 7.28-2l37.74-22.4c4.5-2.67 7.28-7.62 7.28-12.96V41.6c0-5.34-2.77-10.29-7.28-12.96zM79.79 98.59l.06 3.22c0 .39-.25.83-.55.99l-1.91 1.1c-.3.15-.56-.03-.56-.42l-.03-3.17c-1.63.68-3.29.84-4.34.42-.2-.08-.29-.37-.21-.71l.69-2.91c.06-.23.18-.46.34-.6.06-.06.12-.1.18-.13.11-.06.22-.07.31-.03 1.14.38 2.59.2 3.99-.5 1.78-.9 2.97-2.72 2.95-4.52-.02-1.64-.9-2.31-3.05-2.33-2.74.01-5.3-.53-5.34-4.57-.03-3.32 1.69-6.78 4.43-8.96l-.03-3.25c0-.4.24-.84.55-1l1.85-1.18c.3-.15.56.04.56.43l.03 3.25c1.36-.54 2.54-.69 3.61-.44.23.06.34.38.24.75l-.72 2.88c-.06.22-.18.44-.33.58a.77.77 0 01-.19.14c-.1.05-.19.06-.28.05-.49-.11-1.65-.36-3.48.56-1.92.97-2.59 2.64-2.58 3.88.02 1.48.77 1.93 3.39 1.97 3.49.06 4.99 1.58 5.03 5.09.05 3.44-1.79 7.15-4.61 9.41zm26.34-60.5l-35.7 22.05c-4.45 2.6-7.73 5.52-7.74 10.89v43.99c0 3.21 1.3 5.29 3.29 5.9-.65.11-1.32.19-1.98.19-2.09 0-4.15-.57-5.96-1.64l-37.73-22.4c-3.69-2.19-5.98-6.28-5.98-10.67V41.6c0-4.39 2.29-8.48 5.98-10.67l37.74-22.4c1.81-1.07 3.87-1.64 5.96-1.64s4.15.57 5.96 1.64l37.74 22.4c3.11 1.85 5.21 5.04 5.8 8.63-1.27-2.67-4.09-3.39-7.38-1.47z"></path><path fill="#4FA847" d="M99.12 90.73l-9.4 5.62c-.25.15-.43.31-.43.61v2.46c0 .3.2.43.45.28l9.54-5.8c.25-.15.29-.42.29-.72v-2.17c0-.3-.2-.42-.45-.28z"></path>
@@ -229,7 +232,7 @@ function Technical() {
 
 function SoftSkills() {
     return (
-        <section className="flex flex-col items-center mr-2.5 p-2.5 bg-lime-500 dark:bg-lime-700 rounded-se-3xl lg:rounded-se-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+        <section id="flex-col-center" className="mr-2.5 bg-lime-500 dark:bg-lime-700 rounded-se-3xl lg:rounded-se-full">
             <section>
                 <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
                     <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
@@ -239,33 +242,33 @@ function SoftSkills() {
                         Office for Students (OfS).
                     </p>
                     <div className="text-right my-5 sm:ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Organisation</h5>
+                        <h5 className="soft-skills-sub-header">Organisation</h5>
                         <p>
                             Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
                             and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
                         </p>
                     </div>
                     <div className="my-5 sm:mr-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Attention to Detail</h5>
+                        <h5 className="soft-skills-sub-header">Attention to Detail</h5>
                         <p>
                             Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
                         </p>
                     </div>
                     <div className="text-right my-5 sm:ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Problem Solving</h5>
+                        <h5 className="soft-skills-sub-header">Problem Solving</h5>
                         <p>
                             Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
                         </p>
                     </div>
                     <div className="my-5 sm:mr-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Independant Working</h5>
+                        <h5 className="soft-skills-sub-header">Independant Working</h5>
                         <p>
                             My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
                             I am required to work independantly to hit challanging targets and short deadlines.
                         </p>
                     </div>
                     <div className="text-right my-5 sm:ml-10">
-                        <h5 className="font-popcorn font-bold text-2xl sm:text-3xl my-2.5">Teamwork</h5>
+                        <h5 className="soft-skills-sub-header">Teamwork</h5>
                         <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
                     </div>
                 </div>

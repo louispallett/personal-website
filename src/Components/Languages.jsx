@@ -395,7 +395,7 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
                             )
                         )}
                         <div className="flex w-full">
-                            <button className="rounded-md flex-1 bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all" onClick={() => setIsOpen(false)}><b>Close</b></button>
+                            <button className="close" onClick={() => setIsOpen(false)}><b>Close</b></button>
                         </div>
                     </Fade>
                 </Dialog.Panel>
@@ -409,9 +409,9 @@ function Project({ data }) {
         <div className="border-r-4 border-indigo-600 pr-1.5">
             <p className="font-bold">{data.name}</p>
             <p className="text-sm sm:text-base">{data.description}</p>
-            <div className="flex justify-center items-center gap-2.5 my-2.5 flex-col sm:flex-row">
-                {data.repo && (<p><a href={data.repo} target="_blank"><button className="p-1 px-1.5 text-slate-50 font-semibold rounded-md bg-slate-900 text-sm sm:text-base hover:bg-slate-950 transition-all">&gt; GitHub Repo &lt;</button></a></p>)}
-                {data.site && (<p><a href={data.site} target="_blank"><button className="p-1 px-1.5 text-slate-50 font-semibold rounded-md bg-lime-600 hover:bg-lime-700 text-sm sm:text-base transition-all">&gt; Live Site &lt;</button></a></p>)}
+            <div className="flex justify-center items-center gap-2.5 my-2.5 sm:flex-row">
+                {data.repo && (<p><a href={data.repo} target="_blank"><button className="github-repo">&gt; GitHub Repo &lt;</button></a></p>)}
+                {data.site && (<p><a href={data.site} target="_blank"><button className="live-site">&gt; Live Site &lt;</button></a></p>)}
             </div>
         </div>
     )

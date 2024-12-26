@@ -1,0 +1,20 @@
+@import "./fonts.css";
+
+#welcome-element {
+    font-family: 'Mania', sans-serif;
+    font-size: 2.25rem;
+    line-height: 2.5rem; 
+}
+
+@media (min-width: 640px) {
+    #welcome-element {
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #welcome-element {
+        color: #f1f5f9;
+    }
+}

@@ -23,8 +23,11 @@ export default function CV() {
     return (
         <>
             {welcome ? (
-                <section className="flex items-center justify-center dark:text-slate-100">
-                    <div className={exiting ? "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "font-mania text-4xl sm:text-6xl dark:text-slate-100 animate-fade-down animate-duration-1000 animate-ease-in-out"}>
+                <section id="flex-center" className="my-28 mb-48">
+                    <div 
+                        id="welcome-element" 
+                        className={exiting ? "animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "animate-fade-down animate-duration-1000 animate-ease-in-out"}
+                    >
                         <p className="text-center">CV</p>
                     </div>
                 </section>
@@ -32,7 +35,7 @@ export default function CV() {
                 <section className="my-5 dark:text-slate-50">
                     <div className="p-2.5 sm:p-5 text-sm sm:text-base">
                         <Fade triggerOnce delay={500}>
-                            <h1 className="text-center text-2xl sm:text-4xl my-2.5 font-bold italic">Curriculum Vitae</h1>
+                            <h1 className="arch-headers italic text-4xl">Curriculum Vitae</h1>
                         </Fade>
                         <div className="flex justify-center my-5">
                             <Zoom triggerOnce delay={500}>
@@ -89,10 +92,10 @@ function DownloadCV() {
 function About() {
     return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">About Me</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                <h2 className="cv-subheaders">About Me</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <p>
                     I am a resourceful and accomplished Editorial Assistant seeking a change in career. I have over four years of experience
                     working in administrative, customer-facing, target-driven, and high demanding roles. Over the last 20 months, I have been
@@ -111,10 +114,10 @@ function About() {
 function Projects() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Projects</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                <h2 className="cv-subheaders">Projects</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <p>
                     You can find a list of highlighted projects on <Link to="/projects" className="hover:text-lime-500 transition-all font-semibold">my website</Link>. These range from fullstack websites using NodeJS and Express to smaller programmes with 
                     specific uses in other languages (such as Bash and Python). Each project page has a detailed description, technical highlights, and a video demonstration (as well 
@@ -133,16 +136,16 @@ function Projects() {
 function TechSkills() {
 	return (
         <div className="flex flex-1 flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:bg-indigo-500">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Technical Skills</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-pink-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] md:bg-indigo-500">
+                <h2 className="cv-subheaders">Technical Skills</h2>
             </div>
             <div className="flex flex-1 flex-col gap-2.5">
                 <div className="flex flex-col sm:flex-row md:flex-col flex-1 flex-wrap justify-between gap-2.5">
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-green-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-green-600 p-2.5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <p className="text-center"><b>Frontend</b></p>
                         </div>
-                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Bootstrap</li>
                                 <li>CSS</li>
@@ -158,10 +161,10 @@ function TechSkills() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-blue-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-blue-600 p-2.5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <p className="text-center"><b>Backend</b></p>
                         </div>
-                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Express</li>
                                 <li>MongoDB</li>
@@ -171,10 +174,10 @@ function TechSkills() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col gap-2.5">
-                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-yellow-600 p-2.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 bg-yellow-600 p-2.5 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <p className="text-center"><b>Other</b></p>
                         </div>
-                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                        <div className="border-2 border-slate-950 dark:border-slate-50 p-2.5 rounded-md flex-1 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                             <ul className="flex flex-wrap justify-center gap-2.5">
                                 <li>Bash</li>
                                 <li>C</li>
@@ -196,10 +199,10 @@ function TechSkills() {
 function SoftSkills() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:bg-pink-600">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Soft Skills</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-indigo-500 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)] md:bg-pink-600">
+                <h2 className="cv-subheaders">Soft Skills</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <div className="pr-2.5 sm:pr-5">
                     <h4 className="font-semibold">Problem Solving</h4>
                     <p className="text-sm">
@@ -241,10 +244,10 @@ function SoftSkills() {
 function CareerHistory() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-green-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Career History</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-green-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                <h2 className="cv-subheaders">Career History</h2>
             </div>
-            <div className="flex flex-col gap-5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col gap-5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <div>
                     <div className="md:flex justify-between">
                         <h4 className="font-semibold">Editorial Assistant</h4>
@@ -296,10 +299,10 @@ function CareerHistory() {
 function Education() {
 	return (
         <div className="flex flex-col gap-2.5">
-            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-blue-600 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
-                <h2 className="text-xl sm:text-3xl text-center my-2.5 font-popcorn">Formal Education</h2>
+            <div className="flex flex-col gap-2.5 p-2.5 border-2 border-slate-950 dark:border-slate-100 bg-blue-600 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+                <h2 className="cv-subheaders">Formal Education</h2>
             </div>
-            <div className="flex flex-col gap-2.5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col gap-2.5 p-2.5 sm:p-5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <div>
                     <div className="md:flex justify-between">
                         <h4 className="font-semibold">University of Oxford</h4>

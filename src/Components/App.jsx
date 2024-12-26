@@ -22,19 +22,19 @@ function Header() {
                 <div className="font-semibold p-2.5 px-5">
                     <Link to="/dashboard" >
                         <div className="flex flex-col">
-                            <h1 id="subtitle" className="relative text-xl sm:text-2xl dark:text-slate-100">Louis Nicholson-Pallett</h1>
+                            <h1 className="font-popcorn text-right sm:text-2xl dark:text-slate-100">Louis Nicholson-Pallett</h1>
                         </div>
-                        <h1 id="main-title" className="text-sm sm:text-lg dark:text-slate-100">Web Developer</h1>
+                        <h1 className="hidden sm:block text-lg dark:text-slate-100">Web Developer</h1>
                     </Link>
                 </div>
                 <div className="flex h-full justify-end font-semibold dark:text-slate-100">
-                    <Link className="h-full flex items-center px-2.5 sm:px-10 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" to="/">
+                    <Link className="menu-link" to="/">
                         <p>Home</p>
                     </Link>
-                    <Link className="h-full flex items-center px-2.5 sm:px-10 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" to="/projects">
+                    <Link className="menu-link" to="/projects">
                         <p>Projects</p>
                     </Link>
-                    <Link className="h-full flex items-center px-2.5 sm:px-10 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all" to="/cv">
+                    <Link className="menu-link" to="/cv">
                         <p>CV</p>
                     </Link>
                 </div>
