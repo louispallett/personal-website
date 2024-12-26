@@ -15,7 +15,6 @@ export default function CV() {
             }, 1000);
             setTimeout(() => {
                 setWelcome(false);
-                localStorage.setItem('hasWelcomed', 'true'); 
             }, 2000);
         }
         handleWelcome();

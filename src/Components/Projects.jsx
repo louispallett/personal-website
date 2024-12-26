@@ -12,13 +12,12 @@ export default function Projects() {
 
     useEffect(() => {
         const handleWelcome = () => {
-                setTimeout(() => {
-                    setExiting(true);
-                }, 1000);
-                setTimeout(() => {
-                    setWelcome(false);
-                    localStorage.setItem('hasWelcomed', 'true'); 
-                }, 2000);
+            setTimeout(() => {
+                setExiting(true);
+            }, 1000);
+            setTimeout(() => {
+                setWelcome(false);
+            }, 2000);
         }
         handleWelcome();
     }, []);
@@ -51,10 +50,10 @@ export default function Projects() {
                                     </div>
                                 </Fade>
                             </div>
-                            <div className="md:grid grid-cols-2 grid-row-2 gap-5 mx-1.5 md:m-5">
-                                <Zoom triggerOnce>
-                                    <TennisCard />
-                                </Zoom>
+                            <Zoom triggerOnce>
+                                <TennisCard />
+                            </Zoom>
+                            <div className="lg:grid grid-cols-3 gap-5 my-5">
                                 <Zoom triggerOnce>
                                     <BlogCard />
                                 </Zoom>
@@ -88,6 +87,7 @@ function TennisCard() {
                         </div>
                     </Fade>
                     <div>
+                    <p className="font-semibold italic text-center my-1.5">This is my largest application with real-world usage. It utilises a majority of the skills and knowledge I've built up over the last 18 months. If there's a single applciation of mine you want to look at, it should be this one!</p>
                     <p className="my-1.5"><b>Type</b>: full-stack</p>
                     <p><b>Short Description</b>: <i>Tennis Tournament by Lowpal</i> is an application where users can host or join a tennis tournament. Built with React and Express, this application has real-world usage and is currently being used as part of my own tennis club's yearly tournament.</p>
                     </div>
@@ -234,7 +234,7 @@ function OtherStuff() {
                             </p>
                             <p className="text-center">This application does <i>not</i> use React, but is instead built with a template language (in this case Pug).</p>
                             <div className="flex justify-center">
-                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">&gt; GitHub Repo &lt;</button></a>
+                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-900 hover:text-slate-50 dark:hover:bg-slate-50 dark:hover:text-slate-950  transition-all">&gt; GitHub Repo &lt;</button></a>
                             </div>
                         </div>
                     </li>
@@ -247,7 +247,7 @@ function OtherStuff() {
                             </p>
                             <p className="text-center">This is written in pure JavaScript.</p>
                             <div className="flex justify-center">
-                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">&gt; GitHub Repo &lt;</button></a>
+                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 dark:text-slate-50 font-semibold rounded-md hover:bg-slate-900 hover:text-slate-50 dark:hover:bg-slate-50 dark:hover:text-slate-950 transition-all">&gt; GitHub Repo &lt;</button></a>
                             </div>
                         </div>
                     </li>

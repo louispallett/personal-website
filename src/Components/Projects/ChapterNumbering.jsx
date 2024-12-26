@@ -78,7 +78,7 @@ export default function ChapterNumbering() {
                         </div>
                         <div className="flex gap-2.5 justify-center items-center">
                             <div className="flex justify-center my-2.5">
-                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-slate-700 transition-all mt-5">&gt; GitHub Repo &lt;</button></a>
+                                <a href="https://github.com/louispallett/manuscript_chapter_renaming" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-slate-600 dark:hover:bg-slate-50 dark:hover:text-slate-950 transition-all mt-5">&gt; GitHub Repo &lt;</button></a>
                             </div>
                         </div>
                         <hr  className="mx-15 m-5"/>

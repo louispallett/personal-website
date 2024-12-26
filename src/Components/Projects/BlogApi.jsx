@@ -9,13 +9,12 @@ export default function BlogApi() {
 
     useEffect(() => {
         const handleWelcome = () => {
-                setTimeout(() => {
-                    setExiting(true);
-                }, 1000);
-                setTimeout(() => {
-                    setWelcome(false);
-                    localStorage.setItem('hasWelcomed', 'true'); 
-                }, 2000);
+            setTimeout(() => {
+                setExiting(true);
+            }, 1000);
+            setTimeout(() => {
+                setWelcome(false);
+            }, 2000);
         }
         handleWelcome();
     }, []);
@@ -68,7 +67,7 @@ export default function BlogApi() {
                         </div>
                         <div className="flex gap-2.5 justify-center items-center">
                             <div className="flex justify-center my-2.5">
-                                <a href="https://github.com/louispallett/odin-blog-api" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-slate-700 transition-all mt-5">&gt; GitHub Repo &lt;</button></a>
+                                <a href="https://github.com/louispallett/odin-blog-api" target="_blank"><button className="p-1 px-1.5 bg-slate-900 text-slate-50 font-semibold rounded-md hover:bg-slate-600 dark:hover:bg-slate-50 dark:hover:text-slate-950 transition-all mt-5">&gt; GitHub Repo &lt;</button></a>
                             </div>
                             <div className="flex justify-center my-2.5">
                                 <a href="https://son-blog.netlify.app/dashboard/articles/" target="_blank"><button className="p-1 px-1.5 bg-lime-700 text-slate-50 font-semibold rounded-md hover:bg-lime-600 transition-all mt-5">&gt; Live Site &lt;</button></a>
