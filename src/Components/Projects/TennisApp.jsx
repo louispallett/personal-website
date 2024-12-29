@@ -106,12 +106,12 @@ function ShortDescription() {
                 </div>
                 <div id="flex-center">
                     <div id="flex-center">
-                        <a href="https://lowpal-tennis.netlify.app/users/sign-in" target="_blank"><button className="live-site">&gt; Live Site &lt;</button></a>
+                        <a href="https://lowpal-tennis.netlify.app/" target="_blank"><button className="live-site">&gt; Live Site &lt;</button></a>
                     </div>
                     <p><i>*</i></p>
                 </div>
             </div>
-            <p className="text-sm italic">* Note: this is currently being used as part of a tournament and, whilst live, you won't be able to access most pages, as they are behind a login screen.</p>
+            <p className="text-sm italic">* Note: I am currently making significant updates to this application and it is therefore temporarily closed. You can see it live in action in the 'Video: See it in action' section below.</p>
         </>
     )
 }
@@ -182,7 +182,7 @@ function TechnicalHighlights() {
                 </p>
                 <ul className="list-disc ml-5 flex flex-col gap-2">
                     <li>
-                        <b>Frontend form design and validation</b>: Using <a href="https://react-hook-form.com/" className="font-semibold text-lime-500 hover:text-lime-400 transition-all">React Hook Form</a>, I created several forms on the site which allow users to sign up, sign in, and submit match scores. One of the longer forms was the 
+                        <b>Frontend form design and validation</b>: Using <a href="https://react-hook-form.com/">React Hook Form</a>, I created several forms on the site which allow users to sign up, sign in, and submit match scores. One of the longer forms was the 
                         sign up form, which had to collect and validate a decent amount of information, including: name, email, mobile, gender (for selecting tournaments), tournament choices (Men's and Women's Singles and Doubles, and Mixed Doubles), and password. Using React Hook Form, I was able to validate data on the frontend and show 
                         error messages if data is missing - this included: checking if the 'password' and 'confirm password' inputs matched, checking if all required field have been completed, and checking if the mobile number provided is valid. I also set up React state to only show tournaments once a user has selected their gender.
                     </li>
@@ -197,7 +197,7 @@ function TechnicalHighlights() {
                         skills.
                     </li>
                     <li>
-                        <b>Email automation</b>: When users sign up, they receive an automated email confirming their sign up and the categories they signed up to. This was achieved using <a href="https://nodemailer.com/" className="font-semibold text-lime-500 hover:text-lime-400 transition-all">NodeMailer</a>. This is also used when 
+                        <b>Email automation</b>: When users sign up, they receive an automated email confirming their sign up and the categories they signed up to. This was achieved using <a href="https://nodemailer.com/">NodeMailer</a>. This is also used when 
                         reseting passwords.
                     </li>
                     <li>
@@ -231,9 +231,9 @@ function CreateTournament() {
             <div className="flex gap-1.5 items-center">
                 <p>I've written a (fairly long) walkthrough of this function. Click
                 {showLogic ? (
-                    <span onClick={handleShowLogic} className="text-lime-600 dark:text-lime-500 font-semibold hover:text-slate-950 dark:hover:text-slate-50 cursor-pointer transition-all"> here to <u>hide</u> it</span>
+                    <span onClick={handleShowLogic}> here to <u>hide</u> it</span>
                 ) : (
-                    <span onClick={handleShowLogic} className="text-lime-600 dark:text-lime-500 font-semibold hover:text-slate-950 dark:hover:text-slate-50 cursor-pointer transition-all"> here to <u>show</u> it</span>
+                    <span onClick={handleShowLogic}> here to <u>show</u> it</span>
                 )}
                 </p>
             </div>
@@ -353,7 +353,7 @@ function CreateTournament() {
                         </div>
                     </Fade>
                     <p>
-                        And voila, we have all the match objects created for a category with their players assigned. In this file, there are effectively two problems and two algorithms. The first is to create the correct number of matches, the
+                        And <i>voilà</i>, we have all the match objects created for a category with their players assigned. In this file, there are effectively two problems and two algorithms. The first is to create the correct number of matches, the
                         second is to assign the correct participants to the matches. It works based on two assumptions:
                     </p>
                     <ul className="list-disc ml-5 my-2.5">
@@ -481,6 +481,31 @@ matchesByRound = [F, SF1, SF2, QF1, QF2, QF3, QF4, Qual1];`;
 
 function FutureDevelopment() {
     return (
-        <></>
+        <>
+            <h2 className="arch-headers">Future Development</h2>
+            <div className="flex flex-col gap-2.5 my-2.5">
+                <p>
+                    Although I have already successfully used this application in a recent tournament (with around 50 participants), 
+                    I am still making major enhancements. A few of these key improvements are listed below:
+                </p>
+                <ul className="list-disc ml-2.5 my-1.5">
+                    <li>
+                        <b>Enable hosting</b>: I want this application to be used by others to not only be part of a tournament, but to 
+                        host one too. Therefore, I am currently working towards a major overhaul to allow users to host tournaments (as 
+                        well as participate in them).
+                    </li>
+                    <li>
+                        <b>Update react-tournament-bracket (react library)</b>: The react library I use to display the tournament brackets
+                        for each category, whilst brilliant, unfortunately doesn't allow qualification matches to be displayed. I'm currently 
+                        working on forking this open-source library in order to edit it to allow these matches to be displayed.
+                    </li>
+                </ul>
+                <p>
+                    If you head over to the <a href="https://nodemailer.com/">GitHub repository</a> you'll
+                    find the releases and issues I've uploaded, setting out the improvements I have in mind for this application. Whilst I am not expecting it to be used by 
+                    a large amount of people, I do hope that it will allow others (particularly at my own tennis club) to run tournaments of their own easily and efficiently!
+                </p>
+            </div>
+        </>
     )
 }
