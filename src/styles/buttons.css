@@ -27,6 +27,9 @@
 
 .live-site:hover {
     background-color: #65a30d;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
 .close {

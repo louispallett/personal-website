@@ -20,7 +20,7 @@ function Header() {
         <HeaderContainer>
             <HeaderContainerInner>
                 <div className="font-semibold p-2.5 px-5">
-                    <Link to="/dashboard" >
+                    <Link to="/" >
                         <div className="flex flex-col">
                             <h1 className="font-popcorn text-right sm:text-2xl dark:text-slate-100">Louis Nicholson-Pallett</h1>
                         </div>

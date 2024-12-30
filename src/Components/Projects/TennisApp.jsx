@@ -37,7 +37,7 @@ export default function TennisApp() {
                         <hr />
                         <ShortDescription />
                         <hr />
-                        <LongDescription />
+                        <FullDescription />
                         <hr />
                         <ProjectVideo />
                         <hr />
@@ -116,10 +116,10 @@ function ShortDescription() {
     )
 }
 
-function LongDescription() {
+function FullDescription() {
     return (
         <>
-            <h2 className="arch-headers">Long Description</h2>
+            <h2 className="arch-headers">Full Description</h2>
             <div className="flex flex-col sm:flex-row gap-2.5">
                 <Fade delay={750} triggerOnce>
                 <div className="hidden md:block w-64">
@@ -229,7 +229,7 @@ function CreateTournament() {
                 </li>
             </ul>
             <div className="flex gap-1.5 items-center">
-                <p>I've written a (fairly long) walkthrough of this function. Click
+                <p>I've written a (fairly long) walkthrough of this function. Click&nbsp;
                 {showLogic ? (
                     <span onClick={handleShowLogic}> here to <u>hide</u> it</span>
                 ) : (

@@ -1,5 +1,5 @@
 import homeImg from "/assets/images/home-img.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Fade } from "react-awesome-reveal";
@@ -9,7 +9,7 @@ import LanguageBox from "./Languages";
 export default function Home() {
     const [welcome, setWelcome] = useState(true);
     const [exiting, setExiting] = useState(false);
-
+    const targetRef = useRef(null);
 
     useEffect(() => {
         const handleWelcome = () => {
@@ -25,6 +25,21 @@ export default function Home() {
         handleWelcome();
     }, []);
 
+    const scrollDown = () => {
+        // targetRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        const element = targetRef.current;
+        if (element) {
+          const elementPosition = element.getBoundingClientRect().top; 
+          const offset = -80; 
+          const offsetPosition = window.scrollY + elementPosition + offset;
+    
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+    }
+
     return (
         <>
             {welcome ? (
@@ -38,13 +53,13 @@ export default function Home() {
                 </section>
             ) : (
                 <>
-                    <section id="flex-center" className="my-28 mb-24 sm:mb-48 md:mb-64 dark:text-slate-100 max-w-full">
-                        <div className="flex items-center gap-5">
+                    <section className="flex justify-center items-center my-10 md:mb-48 md:my-36 dark:text-slate-100 max-w-full">
+                        <div className="flex flex-col sm:flex-row items-center gap-5">
                             <Fade triggerOnce delay={1000}>
-                                <img src={homeImg} className="w-40 sm:w-72 md:w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
+                                <img src={homeImg} className="w-72 md:w-96 rounded-full shadow-[5px_5px_0px_0px_rgba(109,40,217)]" alt="" />
                             </Fade>
                             <div>
-                                <div className="flex flex-1 text-3xl sm:text-5xl md:text-7xl">
+                                <div className="flex flex-1 text-5xl md:text-7xl">
                                     <div className="flex-1 font-mania">
                                         <p id="name1" className="text-right">Louis</p>
                                         <p id="name2" className="my-5">Nicholson</p>
@@ -55,10 +70,10 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <div id="flex-center" className="p-2.5">
-                        <ChevronDoubleDownIcon className="h-12 w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
+                    <div id="flex-center" className="p-3.5">
+                        <ChevronDoubleDownIcon onClick={scrollDown} className="h-12 cursor-pointer w-12 dark:fill-slate-50 animate-bounce animate-infinite animate-duration-1000 animate-ease-in"/>
                     </div>
-                    <AboutMe />
+                    <AboutMe targetElement={targetRef} />
                     <Technical />
                     <SoftSkills />
                 </>
@@ -67,29 +82,29 @@ export default function Home() {
     )
 }
 
-function AboutMe() {
+function AboutMe({ targetElement }) {
     return (
-        <section className="flex flex-col items-center p-2.5 ml-2.5 bg-indigo-500 dark:bg-indigo-600 rounded-ss-2xl lg:rounded-ss-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
+        <section ref={targetElement} className="flex flex-col items-center p-3.5 ml-2.5 bg-lime-500 bg-opacity-70 dark:bg-indigo-700 rounded-ss-2xl lg:rounded-ss-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
             <section className="lg:pl-52 max-w-maxArticle dark:text-slate-100">
                 <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">About Me</h3>
                 <p className="my-2.5">
                     Based in the city of Bristol, UK, I am a History graduate and self-taught web developer. 
                 </p>
                 <p className="my-2.5">
-                    In early 2023, I started teaching myself web design. I started off with <a href="" className="hover:text-lime-500 transition-all"><b>The Odin Project</b></a>'s course in full-stack web development, covering a range of topics: 
-                    from the basics of HTML, CSS, and JavaScript, to modern frontend frameworks, such as <a href="" className="hover:text-lime-500 transition-all"><b>React</b></a>, and backend frameworks using NodeJS, such as <a href="" className="hover:text-lime-500 transition-all"><b>Express</b></a>, 
-                    along with NoSQL data handling with <a href="" className="hover:text-lime-500 transition-all"><b>MongoDB</b></a>.
+                    In early 2023, I started teaching myself web design. I started off with <a href="https://www.theodinproject.com">The Odin Project</a>'s course in full-stack web development, covering a range of topics: 
+                    from the basics of HTML, CSS, and JavaScript, to modern frontend frameworks, such as <a href="https://react.dev/">React</a>, and backend frameworks using NodeJS, such as <a href="http://expressjs.com/">Express</a>, 
+                    along with NoSQL data handling with <a href="https://www.mongodb.com/">MongoDB</a>.
                 </p>
                 <p className="my-2.5">
-                    Along with The Odin Project, I also completed Harvard's <a href="" className="hover:text-lime-500 transition-all"><b>CS50x: An Introduction to Computer Science</b></a>, covering core concepts such as data structures, memory management, algorithms (specific algorithms like bubble sort, 
+                    Along with The Odin Project, I also completed Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50x: An Introduction to Computer Science</a>, covering core concepts such as data structures, memory management, algorithms (specific algorithms like bubble sort, 
                     merge sort and binary search, as well as time and space complexity), using both C and Python.
                 </p>
                 <p className="my-2.5">
-                    Ensuring that I have a solid foundation in Computer Science, I completed <a href="" className="hover:text-lime-500 transition-all"><b>Code Chef</b></a>'s Data Structures and Algorithms course, which covers more advanced concepts such as Graphs, Bit Manipulation, Number Theory, and Tries. Whilst it's entirely possible to build websites without 
+                    Ensuring that I have a solid foundation in Computer Science, I completed <a href="https://www.codechef.com/">Code Chef</a>'s Data Structures and Algorithms course, which covers more advanced concepts such as Graphs, Bit Manipulation, Number Theory, and Tries. Whilst it's entirely possible to build websites without 
                     knowledge of and practice in these concepts, it's important when creating full-stack applications, especially when manipulating data on the backend. I used these concepts in a couple of my latest projects.
                 </p>
                 <p className="my-2.5">
-                    Finally, the most important contribution to teaching myself web development has been building projects. This is the best way to learn and I've been building small projects as part of my web development journey since week 1. You'll find my latest projects on the <Link to="/projects" className="hover:text-lime-500 transition-all"><b>Projects Page</b></Link>.
+                    Finally, the most important contribution to teaching myself web development has been building projects. This is the best way to learn and I've been building small projects as part of my web development journey since week 1. You'll find my latest projects on the <Link to="/projects"><b>Projects Page</b></Link>.
                 </p>
             </section>
         </section>
@@ -100,7 +115,7 @@ function Technical() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className="flex flex-col items-center p-2.5">
+        <section className="flex flex-col items-center p-3.5">
             <section className="dark:text-slate-100 flex flex-col items-center">
                 <div className="max-w-maxArticle text-center">
                     <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Technical Skills and Knowledge</h3>
@@ -232,47 +247,55 @@ function Technical() {
 
 function SoftSkills() {
     return (
-        <section id="flex-col-center" className="mr-2.5 bg-lime-500 dark:bg-lime-700 rounded-se-3xl lg:rounded-se-full">
-            <section>
-                <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
-                    <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
-                    <p>
-                        Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
-                        and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
-                        Office for Students (OfS).
-                    </p>
-                    <div className="text-right my-5 sm:ml-10">
-                        <h5 className="soft-skills-sub-header">Organisation</h5>
+        <>
+            <section id="flex-col-center" className="flex flex-col items-center p-3.5 mr-2.5 rounded-se-3xl lg:rounded-se-full bg-lime-500 bg-opacity-70 dark:bg-indigo-700">
+                <section>
+                    <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
+                        <h3 className="p-5 text-3xl sm:text-5xl font-popcorn text-center">Soft Skills and Experience</h3>
                         <p>
-                            Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
-                            and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
+                            Whilst I want to show off the projects I have built and my technical knowledge in web development and software, I also have experience in other industries which has allowed me to develop and improve various soft skills. These skills have been vital in my professional experience
+                            and have allowed me to be successful in the roles I've held. I currently work as an Editorial Assistant for the publishing house Routledge/Taylor & Francis, and previously worked as an Indexer and Customer Service Assistant at the same company, as well as a Data Analyst at the
+                            Office for Students (OfS).
                         </p>
+                        <div className="text-right sm:ml-10">
+                            <h5 className="soft-skills-sub-header">Organisation</h5>
+                            <p>
+                                Organisation has been a key skill I have utilised and developed during my professional history. In my current role as an Editorial Assistant, I have to balance a breadth of work, from drawing up and sending out contracts, finding reviewers for proposals and manuscripts, checking the quality of manuscripts and preparing them for production by the Production Department,
+                                and communicating with authors and editors to resolve any queries or issues they have. This demands a that I am highly organised, hardworking, and focused. I ensure that I take effective notes and create clear comments for myself and colleagues to use.
+                            </p>
+                        </div>
+                        <div className="sm:mr-10">
+                            <h5 className="soft-skills-sub-header">Attention to Detail</h5>
+                            <p>
+                                Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
+                            </p>
+                        </div>
                     </div>
-                    <div className="my-5 sm:mr-10">
-                        <h5 className="soft-skills-sub-header">Attention to Detail</h5>
-                        <p>
-                            Whilst I have a breadth and diversity of work, my current and previous roles require/required me to pay close attention to any rules, guidelines, and nuances I would encounter during my work.
-                        </p>
-                    </div>
-                    <div className="text-right my-5 sm:ml-10">
-                        <h5 className="soft-skills-sub-header">Problem Solving</h5>
-                        <p>
-                            Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
-                        </p>
-                    </div>
-                    <div className="my-5 sm:mr-10">
-                        <h5 className="soft-skills-sub-header">Independant Working</h5>
-                        <p>
-                            My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
-                            I am required to work independantly to hit challanging targets and short deadlines.
-                        </p>
-                    </div>
-                    <div className="text-right my-5 sm:ml-10">
-                        <h5 className="soft-skills-sub-header">Teamwork</h5>
-                        <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
-                    </div>
-                </div>
+                </section>
             </section>
-        </section>
+            <section id="flex-col-center" className="flex flex-col items-center p-3.5 mr-2.5 bg-lime-500 bg-opacity-70 dark:bg-indigo-700 ">
+                <section>
+                    <div className="max-w-maxArticle dark:text-slate-100 lg:pr-52">
+                        <div className="text-right my-5 sm:ml-10">
+                            <h5 className="soft-skills-sub-header">Problem Solving</h5>
+                            <p>
+                                Problem solving has been a critical part of all my professional roles and has obviously been an extremely useful skill to utilise and develop when building technical projects since I started teaching myself how to code.
+                            </p>
+                        </div>
+                        <div className="my-5 sm:mr-10">
+                            <h5 className="soft-skills-sub-header">Independent Working</h5>
+                            <p>
+                                My current role as an Editorial Assistant - as well as both my previous roles as an Indexer and a Data Analyst for the OfS - have all required me to work independantly on tasks, learning guidelines, methods, and approaches quickly. In my current role, I am in charge of the administrative side of a book list, handling author queries, manuscript submissions, contract signings, etc.
+                                I am required to work independantly to hit challanging targets and short deadlines.
+                            </p>
+                        </div>
+                        <div className="text-right my-5 sm:ml-10">
+                            <h5 className="soft-skills-sub-header">Teamwork</h5>
+                            <p>Although my professional experience has involved a lot of independant work, I have always had to work collabratively with colleagues and across departments to ensure </p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </>
     )
 }

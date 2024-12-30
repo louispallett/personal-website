@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5em;
+    /* padding: 1.5em; */
 }
 
 .language-container {
@@ -35,20 +35,38 @@
     align-items: center;
     gap: 5px;
     padding: 10px;
-    opacity: .8;
-    transition: opacity 300ms ease-in-out;
 }
-  
+
 .language-container > div:hover {
     cursor: pointer;
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
 }
-  
+
 .language-container > div > img,
 .language-container > div > svg {
+    transition: all 0.2s ease-in-out;
     height: 80px;
     width: 100px;
+}
+
+.language-container > div > img:hover,
+.language-container > div > svg:hover {
+    transform: translate(0.5rem, -0.5rem);
+}
+
+#name1 {
+    animation: fade-down 1000ms ease-out;
+}
+  
+#name2 {
+    animation: fade-back 800ms ease-out;
+}
+  
+#name3 {
+    animation: fade-down 600ms ease-out;
+}
+  
+#name4 {
+    animation: fade-back 2000ms ease-out;
 }
 
 .project-card-container {
@@ -88,6 +106,22 @@ section hr {
     .language-container {
         max-width: 40em;
     }
+}
+
+@media only screen and (max-width: 700px) {
+  #language-containers > div > img,
+  #other > div > img,
+  #language-containers > div > svg,
+  #other > div > svg {
+    height: 50px;
+    width: 70px;
+  }
+
+  #language-containers,
+  #other {
+    font-size: 1rem;
+    font-family: "roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

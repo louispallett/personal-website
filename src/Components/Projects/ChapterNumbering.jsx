@@ -62,7 +62,7 @@ export default function ChapterNumbering() {
                         <hr />
                         <ShortDescription />
                         <hr />
-                        <LongDescription />
+                        <FullDescription />
                     </div>
                 </section>
             )}
@@ -100,10 +100,10 @@ function ShortDescription() {
     )
 }
 
-function LongDescription() {
+function FullDescription() {
     return (
         <>
-            <h2 className="arch-headers">Long Description</h2>
+            <h2 className="arch-headers">Full Description</h2>
             <div className="flex gap-2.5 my-2.5">
                 <Fade delay={750} triggerOnce>
                     <div className="hidden md:block w-64">

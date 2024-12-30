@@ -35,7 +35,7 @@ export default function WeatherApp() {
                         <hr />
                         <ShortDescription />
                         <hr />
-                        <LongDescription />
+                        <FullDescription />
                         <hr />
                         <ProjectVideo />
                         <hr />
@@ -82,10 +82,10 @@ function ShortDescription() {
     )
 }
 
-function LongDescription() {
+function FullDescription() {
     return (
         <>
-            <h2 className="arch-headers">Long Description</h2>
+            <h2 className="arch-headers">Full Description</h2>
             <div className="flex flex-col sm:flex-row gap-2.5">
                 <Fade delay={750} triggerOnce>
                     <div className="hidden md:block w-64">

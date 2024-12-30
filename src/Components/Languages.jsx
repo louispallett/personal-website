@@ -122,9 +122,9 @@ const getLanguageInfo = (language) => {
                 projects: [
                     {
                         name: "This website",
-                        description: `The function that you are using right now - clicking on each language/technology to read more about it in a pop-up - was made posible using React. You can read more about it in the 
-                                    section for this website on the projects page.`,
-                        repo: "https://github.com/louispallett/personal-website",
+                        description: `The function that you are using right now - clicking on each language/technology to read more about it in a pop-up - was made posible using React. The GitHub Repo button below will take you to the 
+                        Languages.jsx file, where I've created a dynamic component and a switch statement to effeciently display the information of each pop-up.`,
+                        repo: "https://github.com/louispallett/personal-website/blob/main/src/Components/Languages.jsx",
                     }, 
                     {
                         name: "Tennis Tournament Application",
@@ -376,15 +376,14 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
                 <Dialog.Panel as="div" className="max-w-4xl space-y-4 p-6 sm:p-12 bg-slate-100 rounded-lg shadow-[5px_5px_0px_0px_#4f46e5] dark:bg-slate-800 dark:text-slate-50">
                     <Fade cascade>
                         <h2 className="font-mania text-2xl text-center">{languageInfo.name}</h2>
-                        <div className="flex items-center flex-col gap-1 text-center sm:text-left sm:flex-row sm:justify-between">
+                        <div className="flex items-center flex-col gap-1 text-center text-sm sm:text-base sm:text-left sm:flex-row sm:justify-between">
                             <p>{languageInfo.usage}</p>
                             <img className="hidden sm:block sm:max-w-36" src={languageInfo.img} alt={languageInfo.alt} />
                         </div>
                         {languageInfo && (
                             languageInfo.projects.length > 0 && (
                                 <div className="flex flex-col gap-2.5 p-1">
-                                    <h3 className="text-lg font-semibold">Projects</h3>
-                                    <hr />
+                                    <h3 className="text-lg text-center font-semibold">Projects</h3>
                                     <p>{languageInfo.projectsInto}</p>
                                     <div className="flex flex-col gap-2.5">
                                         {languageInfo.projects.map((item, index) => (
@@ -406,7 +405,7 @@ export default function LanguageBox({ isOpen, setIsOpen }) {
 
 function Project({ data }) {
     return (
-        <div className="border-r-4 border-indigo-600 pr-1.5">
+        <div className="border-r-4 border-b-2 border-indigo-600 pr-1.5">
             <p className="font-bold">{data.name}</p>
             <p className="text-sm sm:text-base">{data.description}</p>
             <div className="flex justify-center items-center gap-2.5 my-2.5 sm:flex-row">
