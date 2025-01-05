@@ -63,6 +63,8 @@ export default function ChapterNumbering() {
                         <ShortDescription />
                         <hr />
                         <FullDescription />
+                        <hr />
+                        <ProjectVideo />
                     </div>
                 </section>
             )}
@@ -134,6 +136,25 @@ function FullDescription() {
                 <p>The GitHub's ReadMe has instructions on how to run it and where to make edits to update aspects such as file names.</p>
             </div>
 
+        </>
+    )
+}
+
+function ProjectVideo() {
+    return(
+        <>
+            <h2 className="arch-headers">Video: See it in action</h2>
+            <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="MY_VIDEO_POSTER.jpg"
+                data-setup="{}"
+            >
+                <source src="https://res.cloudinary.com/divlee1zx/video/upload/v1736093757/Kooha-2025-01-05-16-09-08_qe3hta.mp4" type="video/mp4" />
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
         </>
     )
 }

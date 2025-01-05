@@ -130,7 +130,17 @@ function ProjectVideo() {
     return(
         <>
             <h2 className="arch-headers">Video: See it in action</h2>
-            <p className="text-center">- - -Insert Video HERE- - -</p>
+            <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="MY_VIDEO_POSTER.jpg"
+                data-setup="{}"
+            >
+                <source src="https://res.cloudinary.com/divlee1zx/video/upload/v1736093815/Kooha-2025-01-05-15-47-29_nkrvob.mp4" type="video/mp4" />
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
         </>
     )
 }

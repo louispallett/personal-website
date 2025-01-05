@@ -24,6 +24,11 @@ pre {
   padding-bottom: 10px;
 }
 
+video {
+  outline: 2px solid #000;
+  border-radius: 2px;
+}
+
 @keyframes jump {
   0% {
     transform: translate(0);
@@ -64,5 +69,11 @@ pre {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  video {
+    outline: 2px solid #fff;
   }
 }
