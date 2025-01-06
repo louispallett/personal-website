@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
-import cv from "/documents/cv.pdf"
+import cv from "/documents/CV.pdf";
 
 export default function CV() {
     const [welcome, setWelcome] = useState(true);
@@ -40,7 +39,6 @@ export default function CV() {
                         </div>
                         <h2 className="text-xl sm:text-3xl text-center font-bold my-5">Louis Nicholson-Pallett</h2>
                         <div className="text-center my-2.5">
-                            <p>+44 7513646798</p>
                             <p>louis.pallett@outlook.com</p>
                             <p>Bristol</p>
                         </div>
@@ -66,7 +64,9 @@ export default function CV() {
 
 function DownloadCV() {
     return (
-        <a href={cv} download="louis_nicholson_pallett_cv.pdf" className="flex justify-center items-center gap-2.5 bg-blue-500 hover:bg-blue-700 text-white font-semibold text-sm py-2 px-4 rounded-md border-2 border-slate-950 dark:border-slate-100 transition-all">
+        <a 
+            href={cv} download="louis_nicholson_pallett_cv.pdf" 
+            className="flex justify-center items-center gap-2.5 bg-blue-500 hover:bg-blue-700 text-white font-semibold text-sm py-2 px-4 rounded-md border-2 border-slate-950 dark:border-slate-100 transition-all">
             <p>Download CV</p>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -87,14 +87,13 @@ function About() {
             </div>
             <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <p>
-                    I am a resourceful and accomplished Editorial Assistant seeking a change in career. I have over four years of experience
-                    working in administrative, customer-facing, target-driven, and high demanding roles. Over the last 20 months, I have been
-                    studying towards a career change in a technology related role – completing, whilst working full-time, The Odin Project’s
-                    course in web development (full-stack with NodeJS) and Harvard University’s <i>CS50X: Introduction to Computer Science</i> (C and Python).
+                    I am a resourceful and accomplished Editorial Assistant with over five years of experience working in administrative, customer-facing, target-driven, and high demanding roles. 
+                    Over the last two years, I have been studying towards a career change in a IT/software related role – completing, whilst working full-time, The Odin Project’s course in web development 
+                    (full-stack with NodeJS and MongoDB) and Harvard University’s CS50X: Introduction to Computer Science (C and Python). 
                 </p>
                 <p>
-                    <a href="https://github.com/louispallett">My GitHub</a> has some great examples of the work I’ve done towards my retraining. You will find six
-                    repositories pinned, each with their own ReadMe files describing what they do and what skills and knowledge I utilised to create them.
+                    My personal website contains lots information about my knowledge and experience of programming languages, frameworks, compilers, and libraries, 
+                    as well as some featured projects to show this knowledge in practice.
                 </p>
             </div>
         </div>
