@@ -266,7 +266,7 @@ const getLanguageInfo = (language) => {
         case "nodejs":
             languageInfo = {
                 name: "NodeJS",
-                img: "https://res.cloudinary.com/divlee1zx/image/upload/v1724594047/languages/nodejs_dlfqa6.svg",
+                img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg",
                 alt: "",
                 usage: `Along with Express, I have used NodeJS to write APIs and servers to return, store, and manipulate data sent from and to the server. I have, as part of learning NodeJS, written a small server application
                         using pure NodeJS (without a framework such as express). So, I understand what Express does when setting up a project using NodeJS. For practical purposes though, I have used Express to create full applications.`,
@@ -277,6 +277,12 @@ const getLanguageInfo = (language) => {
                         repo: "https://github.com/louispallett/lowpal-tennis",
                         site: "https://lowpal-tennis.netlify.app"
                     },
+                    {
+                        name: "Blog API",
+                        description: "My newspaper site - 'Singapore on-Thames' - is a full-stack application using NodeJS and Express on the server-side to handle user accounts and storing data.",
+                        repo: "https://github.com/louispallett/odin-blog-api",
+                        site: "https://son-blog.netlify.app/dashboard/articles/"
+                    }
                 ]
             }
             break;
@@ -307,7 +313,7 @@ const getLanguageInfo = (language) => {
                 usage: `As part of Harvard's CS50x: Introduction to Computer Science, I learned the basics of computer science using C. Learning a low-level language, such as C, allowed me 
                         to really understand how higher level programming languages work and what goes on 'under the hood'. I certainly don't consider myself an expert in C, but I do find it 
                         useful to sometimes solve small problems I've solved in higher level languages also in C. For example, I find writing a HashSet in C really allows me to understand what 
-                        a HashSet is doing, rather than just creating one in one line.`,
+                        a HashSet is doing, rather than just creating one from an in-built method or object.`,
                 projects: [],
             }
             break;
@@ -327,7 +333,7 @@ const getLanguageInfo = (language) => {
                 name: "Java",
                 img: "https://res.cloudinary.com/divlee1zx/image/upload/v1724594143/languages/java_ggqemz.svg",
                 alt: "",
-                usage: `Java is a fantastic language and one I appreciate. I haven't yet written any large projects using it, however I have written algorithms to solve problems found online and also ones 
+                usage: `Java is a great language of which I have a working knowledge. I haven't yet written any large projects using it, however I have written algorithms to solve problems found online and also ones 
                         I've created or needed solving. I'm still very much learning Java but I have some plans for working on larger projects already.`,
                 projects: []
             }
@@ -338,7 +344,7 @@ const getLanguageInfo = (language) => {
                 img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
                 alt: "",
                 usage: `An obviously very popular language due to it's simple syntax, I learned a lot of Python from Harvard's CS50x Introduction to Computer Science after learning C. I've also used it for some
-                        small projects when needing to represent data.`,
+                        small projects when needing to represent data. I also have some larger project ideas which I am in the early stages of creating with Python, as well as a very basic understanding of Django.`,
                 projects: [
                     {
                         name: "Python Stats",

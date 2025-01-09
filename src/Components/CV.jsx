@@ -87,13 +87,13 @@ function About() {
             </div>
             <div className="flex flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <p>
-                    I am a resourceful and accomplished Editorial Assistant with over five years of experience working in administrative, customer-facing, target-driven, and high demanding roles. 
-                    Over the last two years, I have been studying towards a career change in a IT/software related role – completing, whilst working full-time, The Odin Project’s course in web development 
-                    (full-stack with NodeJS and MongoDB) and Harvard University’s CS50X: Introduction to Computer Science (C and Python). 
+                    I am a resourceful and accomplished professional with over five years of experience in customer-facing, administrative, and high-pressure roles. 
+                    Over the last two years, I have pivoted towards a career in technology by studying software and web development while working full-time. 
+                    My training includes The Odin Project’s full-stack web development course (Node.js, React, and MongoDB) and Harvard University’s CS50X: Introduction to Computer Science (C and Python).
                 </p>
                 <p>
-                    My personal website contains lots information about my knowledge and experience of programming languages, frameworks, compilers, and libraries, 
-                    as well as some featured projects to show this knowledge in practice.
+                    I am seeking a role that allow me to combine my technical and problem-solving skills with my strong organizational abilities. My personal site features detailed information about my technical 
+                    expertise and portfolio of projects, including a full-stack tennis tournament web application.
                 </p>
             </div>
         </div>
@@ -108,14 +108,13 @@ function Projects() {
             </div>
             <div className="flex flex-1 flex-col gap-2.5 p-2.5 rounded-md border-2 border-slate-950 dark:border-slate-100 bg-slate-100 dark:bg-slate-800 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.2)]">
                 <p>
-                    You can find a list of highlighted projects on <Link to="/projects">my website</Link>. These range from fullstack websites using NodeJS and Express to smaller programmes with 
-                    specific uses in other languages (such as Bash and Python). Each project page has a detailed description, technical highlights, and a video demonstration (as well 
-                    as links to the repositories and, if applicable, live site).
+                    Creating projects has been a key part of my learning of web development and I learned through that process. My largest project is LowPal Tennis Tournament, a full-stack web application 
+                    with real-world usage – it allows a club to run a tennis tournament through allowing users to sign up, view matches, and update match results, as well as automating the process of assigning 
+                    players to teams and matches through a ‘unique’ server-side algorithm.
                 </p>
                 <p>
-                    My most recent project is a web application to help run a large tennis tournament for my tennis club. It combines a great deal of my knowledge 
-                    of web development and algorithms to generate a full-stack application with real-world usage. Click <Link to="/projects">here</Link> to 
-                    go to the project's page on my website.
+                    You can read more about this project and others on my <Link to="/projects">personal site</Link>. You'll find a video demonstration there, but if you would like to log into a 'dummy' account, please 
+                    get in contact with me and I can provide you with login details.
                 </p>
             </div>
         </div>
@@ -159,7 +158,7 @@ function TechSkills() {
                                     <li>Express</li>
                                     <li>MongoDB</li>
                                     <li>MySQL</li>
-                                    <li>NodeJS</li>
+                                    <li>Node.js</li>
                                 </ul>
                             </div>
                         </div>

@@ -511,7 +511,7 @@ function FutureDevelopment() {
                     </li>
                 </ul>
                 <p>
-                    If you head over to the <a href="https://nodemailer.com/">GitHub repository</a> you'll
+                    If you head over to the <a href="https://github.com/louispallett/lowpal-tennis">GitHub repository</a> you'll
                     find the releases and issues I've uploaded, setting out the improvements I have in mind for this application. Whilst I am not expecting it to be used by 
                     a large amount of people, I do hope that it will allow others (particularly at my own tennis club) to run tournaments of their own easily and efficiently!
                 </p>
