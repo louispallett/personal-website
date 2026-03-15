@@ -27,7 +27,7 @@ export default function TennisApp() {
                         id="welcome-element" 
                         className={exiting ? "animate-ping animate-once animate-duration-[1250ms] animate-ease-in-out" : "animate-fade-down animate-duration-1000 animate-ease-in-out"}
                     >
-                        <p className="text-center">LowPal Tennis</p>
+                        <p className="text-center">Tennis Tournament Creator</p>
                     </div>
                 </section>
             ) : (
@@ -60,7 +60,7 @@ function ShortDescription() {
             <div className="flex flex-col md:grid md:grid-cols-2 md:justify-around">
                 <div>
                     <p className="my-1.5"><b>Type</b>: full-stack</p>
-                    <p><b>Short Description</b>: <i>Tennis Tournament by Lowpal</i> is an application where users can host or join a tennis tournament. Built with React and Express, this application has real-world usage and is currently being used as part of my own tennis club's yearly tournament.</p>
+                    <p><b>Short Description</b>: <i>Tennis Tournament Creator</i> is an application where users can host or join a tennis tournament. Built with React and Express, this application has real-world usage and is currently being used as part of my own tennis club's yearly tournament.</p>
                 </div>
                 <div className="flex flex-col items-center md:items-end my-2.5">
                     <div className="flex items-center md:justify-end">
@@ -106,7 +106,7 @@ function ShortDescription() {
                 </div>
                 <div id="flex-center">
                     <div id="flex-center">
-                        <a href="https://lowpal-tennis.netlify.app/" target="_blank"><button className="live-site">&gt; Live Site &lt;</button></a>
+                        <a href="https://www.tennistournamentcreator.com/" target="_blank"><button className="live-site">&gt; Live Site &lt;</button></a>
                     </div>
                     <p><i>*</i></p>
                 </div>
@@ -138,7 +138,7 @@ function FullDescription() {
             </div>
             <div className="flex flex-col gap-2.5 my-2.5">
                 <p>
-                    <i>Tennis Tournament by LowPal</i> fixes this issue by moving sign-up, viewing your next matches (with information regarding deadlines, match categories, players, and each player's contact details), and submitting your match results to an application. It also automates team 
+                    <i>Tennis Tournament Creator</i> fixes this issue by moving sign-up, viewing your next matches (with information regarding deadlines, match categories, players, and each player's contact details), and submitting your match results to an application. It also automates team 
                     selection, match creation, and participant allocation (to each match) via an algorithm written entirely by me.
                 </p>
                 <p>Advantages brought by this application:</p>
