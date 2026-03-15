@@ -317,6 +317,24 @@ const getLanguageInfo = (language) => {
                 projects: [],
             }
             break;
+        case "cpp":
+            languageInfo = {
+                name: "C++",
+                img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+                alt: "",
+                usage: `I've recently started using C++ in my local password manager project. I'm certainly not an experienced C++ developer, however I have developed a serious foundation through this application, as well
+                as a much better understanding of memory allocation, CMake, and how cryptography, contracts and containment work.`,
+                projects: [
+                    {
+                        name: "Terminally Locked",
+                        description: `A local password manager using libsodium and ncurses. Users create a vault, which contains an encrypted blob of data which they unlock with a master password.
+                        Then, users unlock the vault with the same master password and can create, read, or delete entries (a piece of data containing the username and password for a site. This is designed to be 
+                        small and lightweight - the binary file being currently less than 500KB. However, it still appropriately encrypts data and protects against memory leaks.`,
+                        repo: "https://www.github.com/louispallett/password-manager"
+                    }
+                ]
+            }
+            break;
         case "git":
             languageInfo = {
                 name: "Git",
@@ -328,14 +346,21 @@ const getLanguageInfo = (language) => {
                 projects: []
             }
             break;
-        case "java":
+        case "spring":
             languageInfo = {
-                name: "Java",
-                img: "https://res.cloudinary.com/divlee1zx/image/upload/v1724594143/languages/java_ggqemz.svg",
+                name: "Spring/Java",
+                img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg", 
                 alt: "",
-                usage: `Java is a great language of which I have a working knowledge. I haven't yet written any large projects using it, however I have written algorithms to solve problems found online and also ones 
-                        I've created or needed solving. I'm still very much learning Java but I have some plans for working on larger projects already.`,
-                projects: []
+                usage: `I've used Spring in a couple of smaller projects, primarily as a learning exercise. My largest project, designed to be a star repository, also uses PostgreSQL, but I've used MySQL with Spring
+                        in the past too.`,
+                projects: [
+                    {
+                        name: "Stars",
+                        description: `A website which allows uses to create, visualise, and understand stars. It handles user registration, login (JWTs), and CRUD operations with 
+                                    PostgreSQL as a database.`,
+                        repo: "https://github.com/louispallett/stars"
+                    }
+                ]
             }
             break;
         case "python":

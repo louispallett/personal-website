@@ -24,7 +24,7 @@ function Header() {
                         <div className="flex flex-col">
                             <h1 className="font-popcorn text-right sm:text-2xl dark:text-slate-100">Louis Nicholson-Pallett</h1>
                         </div>
-                        <h1 className="hidden sm:block text-lg dark:text-slate-100">Web Developer</h1>
+                        <h1 className="hidden sm:block text-lg dark:text-slate-100">FullStack Engineer</h1>
                     </Link>
                 </div>
                 <div className="flex h-full justify-end font-semibold dark:text-slate-100">
